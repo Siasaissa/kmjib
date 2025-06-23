@@ -52298,7 +52298,7 @@ body {
   background-size: 100% 500px;
 }
 [data-bs-theme="light"] body:not(.app-blank) {
-  background-image: url(back004-01.jpg);
+  background-image: url(back.jpg);
 }
 [data-bs-theme="dark"] body:not(.app-blank) {
   background-image: url(back.jpg);
@@ -52564,4 +52564,3 @@ body {
     padding-top: 0;
   }
 }
-
