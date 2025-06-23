@@ -2,7 +2,7 @@
 <!-- saved from url=(0041)https:/.KMJib.co.tz/dashboard -->
 <html lang="en" data-bs-theme="light">
     <head>
-          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 
     <!-- <title>New SMS Portal</title> -->
@@ -30,6 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css">
 
 
 
@@ -87,6 +88,7 @@
     <link href="./board_files/style.bundle.css" rel="stylesheet" type="text/css">
     <link href="./board_files/datatables.bundle.css" rel="stylesheet" type="text/css">
     <link href="./board_files/style.css" rel="stylesheet" type="text/css">
+    <link href="board_files/product.css" rel="stylesheet" type="text/css">
 
     <!--end::Global Stylesheets Bundle-->
 
@@ -583,7 +585,7 @@
     <!--end::Floating label card-->
 
     <!--begin::New Campaign Button-->
-    <a href="#" class="btn btn-icon btn-danger h-55px w-55px" data-bs-toggle="modal" data-bs-target="#kt_modal_create_campaign" title="New Campaign">
+    <a href="#" class="btn btn-icon btn-danger h-55px w-55px" data-bs-toggle="modal" data-bs-target="#dashmodal" title="New product">
         <i class="fas fa-plus fs-2 text"></i>
     </a>
     <!--end::New Campaign Button-->
@@ -729,10 +731,6 @@
                         </div>
                         <!--end::Toolbar-->
                     </div>
-                    <!--end::Heading-->
-
-                    <!--end::Heading-->
-
                     <!--begin::Body-->
                     <div class="card-body mt-n20">
                         <!--begin::Stats-->
@@ -813,7 +811,8 @@
                                 </div>
                                 <div class="col-4">
                                     <!--begin::Items-->
-                                    <div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg">
+                                    <div class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer" >
+                                        <a href="table.html">
                                         <!--begin::Symbol-->
                                         <div class="symbol symbol-30px me-5 mb-8 ms-4">
                                             <span class="symbol-label">
@@ -821,8 +820,9 @@
                                             </span>
                                         </div>
                                         <div class="m-0">                                           
-                                            <span class="text-gray-700 fw-bolder d-block fs-7 lh-1 ls-n1 mb-1">Tansaction</span>
+                                            <span class="text-gray-700 fw-bolder d-block fs-7 lh-1 ls-n1 mb-1 ">Tansaction</span>
                                         </div>
+                                        </a>
                                         <!--end::Symbol-->
                                     </div>
                                     
@@ -2022,10 +2022,10 @@
 </div>
 <!--end::Content-->
 
-<script>
-    var myCarousel = document.querySelector('#kt_sliders_widget_campaigns');
-    var carousel = new bootstrap.Carousel(myCarousel);
-</script>
+                <script>
+                    var myCarousel = document.querySelector('#kt_sliders_widget_campaigns');
+                    var carousel = new bootstrap.Carousel(myCarousel);
+                </script>
 
 
                     </div>
@@ -2067,7 +2067,267 @@
         </div>
         <!--end::Page-->
     </div>
+    <!--modals start -->
+    <!--modal 1-->
+<div class="modal fade" id="dashmodal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"> <!-- Optional: modal-lg for larger width -->
+    <div class="modal-content">
+      
+      <!-- Header -->
+      <div class="modal-header">
+        <div>
+          <h4 class="modal-title">New Insurance</h4>
+          <div class="text-muted fs-6">23 June 2025</div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
+      <!-- Body -->
+      <div class="modal-body">
+        
+
+        <!-- Buttons -->
+        <div class="row g-4 fs-2  style="font-family: Verdana, Geneva, Tahoma, sans-serif !important;">
+          <div class="col-md-4"><div class="card-box bg-light-danger" >Motor</div></div>
+          <div class="col-md-4"><div class="card-box bg-light-danger">Miscellaneous & Accidents</div></div>
+          <div class="col-md-4"><div class="card-box bg-light-danger">Marine</div></div>
+          <div class="col-md-4"><div class="card-box bg-light-danger">Goods In Transit</div></div>
+          <div class="col-md-4"><div class="card-box bg-light-danger">Fire</div></div>
+          <div class="col-md-4"><div class="card-box bg-light-danger">Engineering</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--end of modal 1-->
+
+<!--modal2-->
+    <div class=" modal fade" id="transmodal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+           
+
+            <!--begin::Table widget 14-->
+            <div class="card card-flush h-md-100">
+                <!--begin::Header-->
+                <div class="card-header pt-7">
+                    <!--begin::Title-->
+                    <h3 class="card-title align-items-start flex-column">
+                        <span class="card-label fw-bold text-gray-800">Transaction</span>
+
+                        <span class="text-gray-500 mt-1 fw-semibold fs-6">The list of all transaction</span>
+                    </h3>
+                    <!--end::Title-->
+
+                    <!--begin::Toolbar-->
+                   <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
+                        <a href="#" class="btn btn-sm btn-danger">New</a>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <!--end::Toolbar-->
+                </div>
+                <div class="card-body pt-6">
+                    <!--begin::Table container-->
+                    <div class="table-responsive">
+                        <!--begin::Table-->
+                        <table class="table table align-items-center ">
+                            <!--begin::Table head-->
+                            <thead>
+                                <tr class="fs-4 fw-bold text-dark border-bottom-2 ">
+                                    <th class=" min-w-100px text-center">Type </th>
+                                    <th class=" min-w-100px text-center">Created</th>
+                                    <th class=" min-w-100px text-center">Start</th>
+                                    <th class=" min-w-100px text-center ">Expired</th>
+                                    <th class=" min-w-100px text-center ">Agent</th>
+                                    <th class=" min-w-100px text-center ">Region</th>
+                                    <th class=" min-w-100px text-center ">Payment</th>
+                                    <th class=" min-w-100px text-center ">Vehicle</th>
+                                    <th class=" min-w-100px text-center ">Premium</th>
+                                    <th class=" min-w-100px text-center ">Status</th>
+                                    <th class=" min-w-100px text-center "></th>
+                                    <th class=" min-w-100px text-center "></th>
+                                
+                                </tr>
+                            </thead>
+                            <!--end::Table head-->
+
+                            <!--begin::Table body-->
+                            <tbody>
+
+                                <tr class="fs-4 fw-bold text-dark border-bottom-2 ">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Motor</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                                </tr>
+                                <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Motor</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Motor</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Motor</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr>
+                               <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                    <td class="text-gray-600 fw-bold fs-6 text-center">Car</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">2021-06-08 | 13:44:39</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">08 jun 2021</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">07 jun 2022</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Sidra Insurance Agency</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">Dar es Salaam</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">mobile</td> 
+                                    <td class="text-gray-600 fw-bold fs-6">MC358CBA</td>
+                                    <td class="text-gray-600 fw-bold fs-6">59,000.00</td>
+                                    <td><button class="btn btn-success btn-sm disabled">Success</button></td>
+                                    <td class="text-gray-600 fw-bold fs-6"><i class="fas fa-info fs-2 text-warning ms-8"></i></td>
+                                    <td class="text-gray-600 fw-bold fs-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-danger"></i></td>                                                                        
+                               </tr> 
+                            </tbody>
+                            <!--end::Table body-->
+                        </table>
+
+                    </div>
+                    <!--end::Table-->
+                </div>
+                <!--end: Card Body-->
+            </div>
+            <!--end::Table widget 14-->
+             </div>
+        </div>
+        </div>
+  
+<!--end of modal 2-->
+
+    <!--modal end-->
 
     <!--begin::Global Javascript Bundle(mandatory for all pages)-->
     <script src="../assets/plugins/global/plugins.bundle.js"></script>
@@ -2089,12 +2349,20 @@
     <script src="../assets/js/custom/apps/chat/chat.js"></script>
     <script src="../assets/js/custom/utilities/modals/create-campaign.js"></script>
     <script src="../assets/js/custom/utilities/modals/users-search.js"></script>
-    <!-- Only include other modal scripts if specifically needed for this page -->
-    <!--end::Custom Javascript-->
 
-    <!--end::Javascript-->
-    <!--end::Custom Javascript-->
-    <!--end::Javascript-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        $('.table').DataTable({
+        "pageLength": 3 // Show only 5 rows per page
+        });
+    });
+    </script>
+
+
 </body>
 <!--end::Body-->
 
