@@ -92,16 +92,16 @@
                 <!--begin::Header-->
                 <div class="card-header pt-7">
                     <!--begin::Title-->
-                    <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold text-gray-800">Transaction</span>
+                    <div class="card-title align-items-start flex-column">
+                        <span class="card-label fw-bold text-gray-800 fs-4">Claims</span>
 
-                        <span class="text-gray-500 mt-1 fw-semibold fs-6">The list of all transaction</span>
-                    </h3>
+                        <span class="text-gray-500 mt-1 fw-semibold fs-6">24 june 2025, Tuesday</span>
+                    </div>
                     <!--end::Title-->
 
                     <!--begin::Toolbar-->
                     <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                        <a href="#" class="btn btn-sm btn-danger " style="color: white"><i class="fas fa-plus"></i>New</a>
+                        <a href="#" class="btn btn-sm btn-danger " style="color: white" data-bs-toggle="modal" data-bs-target="#claims" ><i class="fas fa-plus"></i>Add New Claims</a>
                     </div>
 
                     <!--end::Toolbar-->
@@ -142,9 +142,7 @@
                                     <td class="text-success fs-6" style="color: #198754 !important;">Success</td>
 
                                     <td>
-                                        <button class="btn btn-warning btn-sm " data-bs-toggle="modal" data-bs-target="#more">
-                                            <span style="color: white;">View Details</span>
-                                        </button>
+                                        <i class="bi bi-eye fs-2 ms-4 cursor-pointer" style="color: #10b45a !important;"></i>
                                     </td>
 
 
@@ -205,6 +203,40 @@
                             </div>
                         </div>
 
+                    </div>
+                </div>
+            </div>
+            <!--modal start-->
+            <div class="modal fade" id="claims" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg"> <!-- Optional: modal-lg for larger width -->
+                    <div class="modal-content">
+                       <div class="modal-body">
+
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="row g-4 fs-2">
+                        <div class="col-md-4 bg-light-danger rounded-3">
+                            <div class="card-box ">Notifications</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box ">Rise Claims</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box">Assessment</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box ">Discharge Voucher</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box ">Payment</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card-box ">Rejection</div>
+                        </div>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>

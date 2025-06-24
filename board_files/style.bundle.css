@@ -6134,7 +6134,7 @@ fieldset:disabled .btn {
 .carousel-control-next:hover,
 .carousel-control-prev:focus,
 .carousel-control-prev:hover {
-  color: #fff;
+  color:none;
   text-decoration: none;
   outline: 0;
   opacity: 0.9;
@@ -47738,12 +47738,7 @@ label.rating-label:hover ~ .rating-label > i {
   color: var(--bs-gray-600);
   background-color: #fff;
 }
-.explore-btn-toggle:active,
-.explore-btn-toggle:focus,
-.explore-btn-toggle:hover {
-  color: #fff;
-  background-color: #00b2ff;
-}
+
 .explore-btn-dismiss {
   border: 0;
 }
@@ -47756,10 +47751,7 @@ label.rating-label:hover ~ .rating-label > i {
   color: #fff;
   background-color: #00b2ff;
 }
-.explore-btn-primary:hover {
-  color: #fff;
-  background-color: #0098da;
-}
+
 .explore-btn-secondary {
   border: 0;
   color: var(--bs-gray-600);
@@ -48004,7 +47996,6 @@ label.rating-label:hover ~ .rating-label > i {
 }
 .bg-hover-white:hover {
   --bs-bg-rgb-color: var(--bs-white-bg-rgb);
-  background-color: #fff !important;
 }
 .bg-active-white.active {
   --bs-bg-rgb-color: var(--bs-white-bg-rgb);
@@ -48016,7 +48007,6 @@ label.rating-label:hover ~ .rating-label > i {
 .bg-state-white.active,
 .bg-state-white:hover {
   --bs-bg-rgb-color: var(--bs-white-bg-rgb);
-  background-color: #fff !important;
 }
 .bg-light-light {
   background-color: var(--bs-light-light) !important;
@@ -50368,7 +50358,7 @@ a:hover {
   --bs-app-header-sticky-box-shadow: none;
 }
 html {
-  font-family: sans-serif;
+  font-family: Poppins;
   text-size-adjust: 100%;
 }
 body,
@@ -50380,7 +50370,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: 13px !important;
   font-weight: 400;
-  font-family: Inter, Helvetica, sans-serif;
+  font-family: Inter, Poppins;
 }
 @media (max-width: 991.98px) {
   body,
