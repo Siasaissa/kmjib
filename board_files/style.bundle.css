@@ -27477,7 +27477,7 @@ fieldset:disabled .btn {
   --bs-code-shadow: rgba(0, 0, 0, 0.08) 0px 3px 9px 0px;
   --bs-code-border-color: transparent;
   --bs-code-color: #b93993;
-  --bs-symbol-label-color: #b5b7c8;
+  --bs-symbol-label-color: ;
   --bs-symbol-label-bg: #1b1c22;
   --bs-symbol-border-color: rgba(255, 255, 255, 0.5);
   --bs-bullet-bg-color: #464852;
