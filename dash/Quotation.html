@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insurance Quotation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="board_files/quotation_.css" rel="stylesheet">
+
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div class="full-screen-container">
+    <div class="quotation-container">
+      <div class="quotation-card">
+        <div class="row card-header">
+          <h3><a href="index.html"><i class="bi bi-arrow-left me-4 cursor-pointer text-white"></i></a> Insurance Quotation</h3>
+
+        </div>
+        <div class="card-body">
+          <!-- Progress Bar -->
+          <div class="step-bar" id="stepBar">
+            <div class="fill-line" id="fillLine" style="width: 0%;"></div>
+            <div class="step active">1</div>
+            <div class="step">2</div>
+            <div class="step">3</div>
+            <div class="step">4</div>
+            <div class="step">5</div>
+          </div>
+
+          <!-- Form -->
+          <form id="quotationForm">
+            <!-- Step 1 -->
+            <div class="step-content">
+              <h5 class="step-title"><i class="bi bi-person me-2"></i>Customer Information</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label required-field">Full Name</label>
+                  <input class="form-control" placeholder="Ahmed Siasa" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Phone Number</label>
+                  <input class="form-control" placeholder="+255 613 803 662" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input class="form-control" type="email" placeholder="ahmed@humtech.co.tz">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">National ID / Company Reg No</label>
+                  <input class="form-control" placeholder="1234567890">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label required-field">Customer Type</label>
+                  <select class="form-select">
+                    <option>Individual</option>
+                    <option>Corporate</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <div></div>
+                <button type="button" class="btn btn-primary" onclick="changeStep(1)">
+                  Next <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-content d-none">
+              <h5 class="step-title"><i class="bi bi-box-seam me-2"></i>Product Information</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label required-field">Insurance Type</label>
+                  <select class="form-select">
+                    <option>Motor</option>
+                    <option>Health</option>
+                    <option>Fire</option>
+                    <option>Travel</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Product Name / Plan</label>
+                  <input class="form-control" placeholder="Comprehensive Auto Plan">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Coverage Type</label>
+                  <select class="form-select">
+                    <option>Comprehensive</option>
+                    <option>Third-Party</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Coverage Amount</label>
+                  <input class="form-control" type="number" placeholder="25000">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Coverage Duration</label>
+                  <input class="form-control" placeholder="12 Months">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Currency</label>
+                  <select class="form-select">
+                    <option>USD</option>
+                    <option>TZS</option>
+                    <option>EUR</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-secondary" onclick="changeStep(-1)">
+                  <i class="bi bi-arrow-left me-2"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary" onclick="changeStep(1)">
+                  Next <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-content d-none">
+              <h5 class="step-title"><i class="bi bi-shield-exclamation me-2"></i>Risk Details</h5>
+              <div class="row g-3">
+                <div class="col-md-4">
+                  <label class="form-label required-field">Vehicle Make</label>
+                  <input class="form-control" placeholder="Toyota">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label required-field">Model</label>
+                  <input class="form-control" placeholder="Corolla">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label required-field">Year</label>
+                  <input class="form-control" type="number" placeholder="2021">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Registration Number</label>
+                  <input class="form-control" placeholder="T123ABC">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Chassis Number</label>
+                  <input class="form-control" placeholder="JT2BF22K3W0123456">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Vehicle Usage</label>
+                  <select class="form-select">
+                    <option>Private</option>
+                    <option>Commercial</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label required-field">Estimated Market Value</label>
+                  <input class="form-control" placeholder="20000">
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-secondary" onclick="changeStep(-1)">
+                  <i class="bi bi-arrow-left me-2"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary" onclick="changeStep(1)">
+                  Next <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-content d-none">
+              <h5 class="step-title"><i class="bi bi-calculator me-2"></i>Premium Calculation</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label required-field">Gross Premium</label>
+                  <div class="input-group">
+                    <span class="input-group-text">Tzs</span>
+                    <input class="form-control" type="number" placeholder="0.00">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Tax (%)</label>
+                  <div class="input-group">
+                    <input class="form-control" type="number" placeholder="0">
+                    <span class="input-group-text">%</span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Stamp Duty / Other Charges</label>
+                  <div class="input-group">
+                    <span class="input-group-text">Tzs</span>
+                    <input class="form-control" type="number" placeholder="0.00">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Discount (%)</label>
+                  <div class="input-group">
+                    <input class="form-control" type="number" placeholder="0">
+                    <span class="input-group-text">%</span>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Total Premium</label>
+                  <div class="input-group">
+                    <span class="input-group-text">Tzs</span>
+                    <input class="form-control bg-light" type="number" placeholder="0.00" readonly>
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Payment Method</label>
+                  <select class="form-select">
+                    <option>Mobile Money</option>
+                    <option>Bank Transfer</option>
+                    <option>Credit Card</option>
+                  </select>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-secondary" onclick="changeStep(-1)">
+                  <i class="bi bi-arrow-left me-2"></i> Back
+                </button>
+                <button type="button" class="btn btn-primary" onclick="changeStep(1)">
+                  Next <i class="bi bi-arrow-right ms-2"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-content d-none">
+              <h5 class="step-title"><i class="bi bi-cloud-arrow-up me-2"></i>Finalize Quotation</h5>
+              <div class="row g-3">
+                <div class="col-12 mb-4">
+<div class="col-12 mb-4">
+    <label for="fileUpload" class="form-label fw-semibold mb-2">Supporting Documents</label>
+    <div class="file-upload-card border rounded-3 p-4 position-relative" id="dropZone">
+        <input type="file" class="file-upload-input d-none" id="fileUpload" multiple accept=".pdf,.jpg,.jpeg,.png">
+        <label for="fileUpload" class="file-upload-label d-flex flex-column align-items-center justify-content-center text-center cursor-pointer py-4">
+            <div class="file-upload-icon bg-light rounded-circle p-3 mb-3">
+                <i class="bi bi-cloud-arrow-up fs-4 text-primary" id="uploadIcon"></i>
+            </div>
+            <h6 class="mb-1" id="mainText">Drag and drop files here</h6>
+            <p class="text-muted mb-2" id="secondaryText">or click to browse</p>
+            <small class="text-muted">Supports: PDF, JPG, PNG (Max. 5MB each)</small>
+        </label>
+        <div class="file-previews mt-3" id="filePreviews"></div>
+    </div>
+</div>
+
+<style>
+    
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const dropZone = document.getElementById('dropZone');
+    const fileInput = document.getElementById('fileUpload');
+    const filePreviews = document.getElementById('filePreviews');
+    const uploadIcon = document.getElementById('uploadIcon');
+    const mainText = document.getElementById('mainText');
+    const secondaryText = document.getElementById('secondaryText');
+
+    // Handle drag and drop events
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, highlight, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, unhighlight, false);
+    });
+
+    function highlight() {
+        dropZone.classList.add('dragover');
+        uploadIcon.classList.replace('bi-cloud-arrow-up', 'bi-file-earmark-plus');
+        mainText.textContent = 'Drop files to upload';
+    }
+
+    function unhighlight() {
+        dropZone.classList.remove('dragover');
+        uploadIcon.classList.replace('bi-file-earmark-plus', 'bi-cloud-arrow-up');
+        mainText.textContent = 'Drag and drop files here';
+    }
+
+    // Handle dropped files
+    dropZone.addEventListener('drop', handleDrop, false);
+
+    function handleDrop(e) {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        handleFiles(files);
+    }
+
+    // Handle selected files
+    fileInput.addEventListener('change', function() {
+        handleFiles(this.files);
+    });
+
+    // Process and display files
+    function handleFiles(files) {
+        if (files.length > 0) {
+            uploadIcon.classList.replace('bi-cloud-arrow-up', 'bi-check-circle');
+            uploadIcon.classList.add('text-success');
+            mainText.textContent = `${files.length} file(s) selected`;
+            secondaryText.textContent = 'Click to add more files';
+            
+            filePreviews.innerHTML = '';
+            
+            [...files].forEach(file => {
+                if (file.size > 5 * 1024 * 1024) {
+                    alert(`File ${file.name} exceeds 5MB limit`);
+                    return;
+                }
+                
+                const preview = document.createElement('div');
+                preview.className = 'file-preview';
+                
+                let iconClass = 'bi-file-earmark';
+                if (file.type.includes('image/')) {
+                    iconClass = 'bi-file-image';
+                } else if (file.type.includes('pdf')) {
+                    iconClass = 'bi-file-pdf';
+                }
+                
+                preview.innerHTML = `
+                    <i class="bi ${iconClass}"></i>
+                    <div class="file-info">
+                        <div class="file-name">${file.name}</div>
+                        <div class="file-size small text-muted">${formatFileSize(file.size)}</div>
+                    </div>
+                    <i class="bi bi-x-lg file-remove" title="Remove file"></i>
+                `;
+                
+                preview.querySelector('.file-remove').addEventListener('click', function() {
+                    preview.remove();
+                    // Note: To actually remove from file input would require more complex handling
+                });
+                
+                filePreviews.appendChild(preview);
+            });
+        }
+    }
+
+    function formatFileSize(bytes) {
+        if (bytes === 0) return '0 Bytes';
+        const k = 1024;
+        const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+        const i = Math.floor(Math.log(bytes) / Math.log(k));
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+});
+</script>
+                <div class="col-12">
+                  <label class="form-label">Additional Notes</label>
+                  <textarea class="form-control" rows="3" placeholder="Any special instructions or comments..."></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" required id="confirmCheck">
+                    <label class="form-check-label" for="confirmCheck">
+                      I confirm that all information provided is accurate and complete.
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-4">
+                <button type="button" class="btn btn-secondary" onclick="changeStep(-1)">
+                  <i class="bi bi-arrow-left me-2"></i> Back
+                </button>
+                <div>
+                  <button type="button" class="btn btn-outline-primary me-2">
+                    <i class="bi bi-eye me-2"></i>Preview
+                  </button>
+                  <button type="submit" class="btn btn-danger">
+                    <i class="bi bi-check-circle me-2"></i>Submit Quotation
+                  </button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentStep = 0;
+    const steps = document.querySelectorAll(".step-bar .step");
+    const stepContents = document.querySelectorAll(".step-content");
+    const fillLine = document.getElementById("fillLine");
+
+    function updateUI() {
+      steps.forEach((step, index) => {
+        step.classList.remove("active", "completed");
+        if (index < currentStep) step.classList.add("completed");
+        if (index === currentStep) step.classList.add("active");
+      });
+
+      stepContents.forEach((content, index) => {
+        content.classList.toggle("d-none", index !== currentStep);
+      });
+
+      fillLine.style.width = ((currentStep) / (steps.length - 1)) * 100 + "%";
+    }
+
+    function changeStep(n) {
+      const newStep = currentStep + n;
+      if (newStep >= 0 && newStep < steps.length) {
+        currentStep = newStep;
+        updateUI();
+        document.querySelector('.card-body').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (newStep === steps.length) {
+        document.getElementById("quotationForm").submit();
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const grossPremiumInput = document.querySelector('input[placeholder="0.00"]');
+      const taxInput = document.querySelector('input[placeholder="0"]');
+      const chargesInput = document.querySelector('input[placeholder="0.00"]:not([readonly])');
+      const discountInput = document.querySelectorAll('input[placeholder="0"]')[1];
+      const totalPremiumInput = document.querySelector('input[readonly]');
+      
+      [grossPremiumInput, taxInput, chargesInput, discountInput].forEach(input => {
+        input.addEventListener('input', calculateTotalPremium);
+      });
+      
+      function calculateTotalPremium() {
+        const grossPremium = parseFloat(grossPremiumInput.value) || 0;
+        const taxPercent = parseFloat(taxInput.value) || 0;
+        const charges = parseFloat(chargesInput.value) || 0;
+        const discountPercent = parseFloat(discountInput.value) || 0;
+        
+        const taxAmount = grossPremium * (taxPercent / 100);
+        const discountAmount = grossPremium * (discountPercent / 100);
+        
+        const total = grossPremium + taxAmount + charges - discountAmount;
+        totalPremiumInput.value = total.toFixed(2);
+      }
+    });
+
+    updateUI();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

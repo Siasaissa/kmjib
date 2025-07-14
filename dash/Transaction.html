@@ -42,7 +42,7 @@
     <link href="/board_files/datatables.bundle.css" rel="stylesheet" type="text/css">
     <!--end::Vendor Stylesheets-->
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link href="/board_files/plugins.bundle.css" rel="stylesheet" type="text/css">
+
     <link href="/board_files/style.bundle.css" rel="stylesheet" type="text/css">
     <!--end::Global Stylesheets Bundle-->
     <!--begin::Fonts(mandatory for all pages)-->
@@ -101,7 +101,7 @@
 
                     <!--begin::Toolbar-->
                     <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                        <button class="btn btn-sm bg-danger "><a href="#" style="color: white;" ><i class="fas fa-plus"></i>Add New Product</a></button>
+                        <button class="btn btn-sm bg-danger " onclick="openNewTransactionModal()"><a href="#" style="color: white;" ><i class="fas fa-plus"></i>Add New Transaction</a></button>
                     </div>
 
                     <!--end::Toolbar-->
@@ -113,41 +113,99 @@
                         <table class="table table align-items-center border-danger" style=".border-light-danger {border-color: #f8d7da !important; } font-family: Geneva !important; ">
                             <!--begin::Table head-->
                             <thead>
-                                <tr class="fs-4 fw-bold text-dark border-bottom-2 ">
-                                    <th class=" min-w-100px text-center ">S/No</th>
-                                    <th class=" min-w-100px text-center ">Vehicle</th>
-                                    <th class=" min-w-100px text-center ">Agent</th>
-                                    <th class=" min-w-100px text-center ">Region</th>
-                                    <th class=" min-w-100px text-center ">Payment</th>
-                                    <th class=" min-w-100px text-center ">Premium</th>
-                                    <th class=" min-w-100px text-center ">Created At</th>
-                                    <th class=" min-w-100px text-center ">Status</th>
-                                    <th class=" min-w-100px text-center ">Action</th>
-
-                                </tr>
+                            <tr class="fs-4 fw-bold text-dark border-bottom-2">
+                                <th class="min-w-80px text-center">S/No</th>
+                                <th class="min-w-150px text-center">Client</th>
+                                <th class="min-w-120px text-center">#Policy</th>
+                                <th class="min-w-100px text-center">Vehicle</th>
+                                <th class="min-w-150px text-center">Company</th>
+                                <th class="min-w-100px text-center">Region</th>
+                                <th class="min-w-100px text-center">Payment</th>
+                                <th class="min-w-120px text-center">Premium</th>
+                                <th class="min-w-150px text-center">Created At</th>
+                                <th class="min-w-100px text-center">Status</th>
+                                <th class="min-w-120px text-center">Action</th>
+                            </tr>
                             </thead>
+
                             <!--end::Table head-->
 
                             <!--begin::Table body-->
                             <tbody>
- 
-                                 <tr class="fs-4  border-bottom-2 ">
-                                    <td class="text-gray-600  fs-6 text-center">01</td>
-                                    <td class="text-gray-600  fs-6 text-center">Motor</td>
-                                    <td class="text-gray-600  fs-6">Sidra Insurance Agency</td>
-                                    <td class="text-gray-600  fs-6">Dar es salaam</td>
-                                    <td class="text-gray-600  fs-6">Mobile</td>
-                                    <td class="text-gray-600  fs-6">59,000.00</td>
-                                    <td class="text-gray-600  fs-6">2021-06-08| 13:44:39</td>
-                                    <td class="text-success fs-6" style="color: #198754 !important;">Success</td>
+                            <tr class="fs-5 border-bottom-2">
+                                <td class="text-center">01</td>
+                                <td>Ahmed Siasa</td>
+                                <td>POL1234</td>
+                                <td>Motor - T123 ABC</td>
+                                <td>Heritage Insurance</td>
+                                <td>Dar es Salaam</td>
+                                <td>Mobile</td>
+                                <td>100,000.00</td>
+                                <td>2025-07-14 10:30 AM</td>
+                                <td>
+                                <span class="badge border border-success text-success d-inline-block text-center" style="width: 80px;color: green;">
+                                    Success
+                                </span>
 
-                                    <td>
-                                        <button class="btn  btn-sm " style="background-color: #ffd363;">View Details</button>
-                                    </td>
+                                </td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center align-items-center gap-3">
+                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
+                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                    </div>
+                                </td>
 
+                            </tr>
 
-                                </tr>
+                            <tr class="fs-5 border-bottom-2">
+                                <td class="text-center">02</td>
+                                <td>Aisha Bello</td>
+                                <td>POL5678</td>
+                                <td>Motor - T456 DEF</td>
+                                <td>Jubilee Insurance</td>
+                                <td>Arusha</td>
+                                <td>Bank</td>
+                                <td>85,500.00</td>
+                                <td>2025-07-10 2:45 PM</td>
+                                <td>
+                                <span class="badge border border-warning text-Warning d-inline-block text-center" style="width: 80px; color: orange;">
+                                    Pending
+                                </span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center align-items-center gap-3">
+                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
+                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="fs-5 border-bottom-2">
+                                <td class="text-center">03</td>
+                                <td>John Peter</td>
+                                <td>POL9012</td>
+                                <td>Commercial - T789 XYZ</td>
+                                <td>Resolution Insurance</td>
+                                <td>Mwanza</td>
+                                <td>Cash</td>
+                                <td>230,000.00</td>
+                                <td>2025-06-30 09:15 AM</td>
+                                <td>
+                                <span class="badge border border-danger text-danger d-inline-block text-center" style="width: 80px; color: red;">
+                                    Failed
+                                </span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="d-flex justify-content-center align-items-center gap-3">
+                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
+                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            
                             </tbody>
+
                             <!--end::Table body-->
                         </table>
                     </div>
@@ -156,55 +214,66 @@
 
         </div>
         <!--modal start-->
-        <div class="modal fade " id="more" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-md-custom">
-                <!-- Optional: modal-lg for larger width -->
-                <div class="modal-content">
-
-                    <div class="card card-flush h-md-100">
-                        <!--begin::Header-->
-                        <div class="card-header pt-7">
-                            <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="w-100 text-center mb-2 text-success">
-                                    <h2>Details</h2>                               
-                            </div>
-                        </div>
-                        <div class="card-body pt-6">
-                                <div class="row align-items-start ms-4">
-                            <!-- Details Column -->
-                            <div class="col-md-8">
-                                <p><strong>Name:</strong> Mousa Doumba</p>
-                                <p><strong>Expired Date:</strong> 10 July 2025</p>
-                                <p><strong>Vehicle:</strong> Motor</p>
-                                <p><strong>Agent:</strong> Sidra Insurance Agency</p>
-                                <p><strong>Region:</strong> Dar es Salaam</p>
-                                <p><strong>Payment:</strong> Mobile</p>
-                                <p><strong>Premium:</strong> 59,000.00</p>
-                                <p><strong>Start Date:</strong> 09 June 2025</p>
-                                <p><strong>Created At:</strong> 2021-06-08 | 13:44:39</p>
-                            </div>
-
-                            <!-- QR and Button Column -->
-                            <div class="col-md-4 d-flex flex-column align-items-end" style="margin-top: -3%;">
-                                <img src="board_files/qr.png" alt="QRCode" class="img-fluid mb-3" style="max-width: 200px; height: auto;">
-
-                                <div class="d-flex align-items-center gap-3">
-                                    <img src="board_files/TIRAlogo.png" alt="TIRA Logo" style="width: 50px; height: auto;margin-left: -45%;">
-                                    <button class="btn btn-warning btn-sm px-4 d-flex" style="color: white;">Check Status</button>
-                                </div>
-                            </div>
-                        </div>
-
-
-                            </div>
-                        </div>
-
+        <div class="modal fade" id="newTransactionModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" style="color: white;">New Transaction</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                    <label class="form-label">Client Name</label>
+                    <input type="text" class="form-control" placeholder="e.g. John Doe">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Vehicle</label>
+                    <input type="text" class="form-control" placeholder="e.g. Motor">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Agent</label>
+                    <input type="text" class="form-control" placeholder="e.g. Sidra Agency">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Region</label>
+                    <input type="text" class="form-control" placeholder="e.g. Dar es Salaam">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Payment Method</label>
+                    <select class="form-select">
+                        <option>Mobile</option>
+                        <option>Bank</option>
+                        <option>Cash</option>
+                    </select>
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Premium (TZS)</label>
+                    <input type="number" class="form-control" placeholder="e.g. 59000">
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Status</label>
+                    <select class="form-select">
+                        <option>Success</option>
+                        <option>Pending</option>
+                        <option>Failed</option>
+                    </select>
+                    </div>
+                    <div class="col-md-6">
+                    <label class="form-label">Date</label>
+                    <input type="date" class="form-control">
                     </div>
                 </div>
+                </form>
             </div>
+            <div class="modal-footer">
+                <button class="btn btn-sm bg-success " ><a href="#" style="color: white;" ><i class="fas fa-plus"></i>Add New Transaction</a></button>
+                <button class="btn btn-sm bg-gray-100" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
 
 
             <!--modal end-->
@@ -262,6 +331,13 @@
                         "pageLength": 3 // Show only 5 rows per page
                     });
                 });
+
+                function openNewTransactionModal() {
+                    const modal = new bootstrap.Modal(document.getElementById('newTransactionModal'));
+                    modal.show();
+                }
+
+
             </script>
 
         </div>

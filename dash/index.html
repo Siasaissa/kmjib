@@ -50,7 +50,7 @@
 
 
     <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link href="/board_files/plugins.bundle.css" rel="stylesheet" type="text/css">
+
     <link href="/board_files/style.bundle.css" rel="stylesheet" type="text/css">
     <!--end::Global Stylesheets Bundle-->
 
@@ -209,232 +209,10 @@
                                     data-kt-search-enter="enter" data-kt-search-layout="menu"
                                     data-kt-menu-trigger="auto" data-kt-menu-overflow="false"
                                     data-kt-menu-permanent="true" data-kt-menu-placement="bottom-end">
-
-
-
-                                    <!--begin::Menu-->
-                                    <div data-kt-search-element="content"
-                                        class="menu menu-sub menu-sub-dropdown p-7 w-325px w-md-375px">
-                                        <!--begin::Wrapper-->
-                                        <!--end::Wrapper-->
-
-                                        <!--begin::Preferences-->
-                                        <form data-kt-search-element="advanced-options-form" class="pt-1 d-none">
-                                            <!--begin::Heading-->
-                                            <h3 class="fw-semibold text-gray-900 mb-7">Advanced Search</h3>
-                                            <!--end::Heading-->
-
-                                            <!--begin::Input group-->
-                                            <div class="mb-5">
-                                                <input type="text"
-                                                    class="form-control form-control-sm form-control-solid"
-                                                    placeholder="Contains the word" name="query" />
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group-->
-                                            <div class="mb-5">
-                                                <!--begin::Radio group-->
-                                                <div class="nav-group nav-group-fluid">
-                                                    <!--begin::Option-->
-                                                    <label>
-                                                        <input type="radio" class="btn-check" name="type" value="has"
-                                                            checked="checked" />
-                                                        <span
-                                                            class="btn btn-sm btn-color-muted btn-active btn-active-primary">
-                                                            All
-                                                        </span>
-                                                    </label>
-                                                    <!--end::Option-->
-
-                                                    <!--begin::Option-->
-                                                    <label>
-                                                        <input type="radio" class="btn-check" name="type"
-                                                            value="users" />
-                                                        <span
-                                                            class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">
-                                                            Users
-                                                        </span>
-                                                    </label>
-                                                    <!--end::Option-->
-
-                                                    <!--begin::Option-->
-                                                    <label>
-                                                        <input type="radio" class="btn-check" name="type"
-                                                            value="orders" />
-                                                        <span
-                                                            class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">
-                                                            Orders
-                                                        </span>
-                                                    </label>
-                                                    <!--end::Option-->
-
-                                                    <!--begin::Option-->
-                                                    <label>
-                                                        <input type="radio" class="btn-check" name="type"
-                                                            value="projects" />
-                                                        <span
-                                                            class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">
-                                                            Projects
-                                                        </span>
-                                                    </label>
-                                                    <!--end::Option-->
-                                                </div>
-                                                <!--end::Radio group-->
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group-->
-                                            <div class="mb-5">
-                                                <input type="text" name="assignedto"
-                                                    class="form-control form-control-sm form-control-solid"
-                                                    placeholder="Assigned to" value="" />
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group-->
-                                            <div class="mb-5">
-                                                <input type="text" name="collaborators"
-                                                    class="form-control form-control-sm form-control-solid"
-                                                    placeholder="Collaborators" value="" />
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group-->
-                                            <div class="mb-5">
-                                                <!--begin::Radio group-->
-                                                <div class="nav-group nav-group-fluid">
-                                                    <!--begin::Option-->
-                                                    <label>
-                                                        <input type="radio" class="btn-check" name="attachment"
-                                                            value="has" checked="checked" />
-                                                        <span
-                                                            class="btn btn-sm btn-color-muted btn-active btn-active-primary">
-                                                            Has attachment
-                                                        </span>
-                                                    </label>
-                                                    <!--end::Option-->
-
-                                                    <!--begin::Option-->
-                                                    <label>
-                                                        <input type="radio" class="btn-check" name="attachment"
-                                                            value="any" />
-                                                        <span
-                                                            class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4">
-                                                            Any
-                                                        </span>
-                                                    </label>
-                                                    <!--end::Option-->
-                                                </div>
-                                                <!--end::Radio group-->
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group-->
-                                            <div class="mb-5">
-                                                <select name="timezone" aria-label="Select a Timezone"
-                                                    data-control="select2" data-dropdown-parent="#kt_header_search"
-                                                    data-placeholder="date_period"
-                                                    class="form-select form-select-sm form-select-solid">
-                                                    <option value="next">Within the next</option>
-                                                    <option value="last">Within the last</option>
-                                                    <option value="between">Between</option>
-                                                    <option value="on">On</option>
-                                                </select>
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Input group-->
-                                            <div class="row mb-8">
-                                                <!--begin::Col-->
-                                                <div class="col-6">
-                                                    <input type="number" name="date_number"
-                                                        class="form-control form-control-sm form-control-solid"
-                                                        placeholder="Lenght" value="" />
-                                                </div>
-                                                <!--end::Col-->
-
-                                                <!--begin::Col-->
-                                                <div class="col-6">
-                                                    <select name="date_typer" aria-label="Select a Timezone"
-                                                        data-control="select2" data-dropdown-parent="#kt_header_search"
-                                                        data-placeholder="Period"
-                                                        class="form-select form-select-sm form-select-solid">
-                                                        <option value="days">Days</option>
-                                                        <option value="weeks">Weeks</option>
-                                                        <option value="months">Months</option>
-                                                        <option value="years">Years</option>
-                                                    </select>
-                                                </div>
-                                                <!--end::Col-->
-                                            </div>
-                                            <!--end::Input group-->
-
-                                            <!--begin::Actions-->
-                                            <div class="d-flex justify-content-end">
-                                                <button type="reset"
-                                                    class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2"
-                                                    data-kt-search-element="advanced-options-form-cancel">Cancel</button>
-
-                                                <a href="../utilities/search/horizontal.html"
-                                                    class="btn btn-sm fw-bold btn-primary"
-                                                    data-kt-search-element="advanced-options-form-search">Search</a>
-                                            </div>
-                                            <!--end::Actions-->
-                                        </form>
-
-                                        <!--end::Preferences-->
-                                    </div>
                                     <!--end::Menu-->
                                 </div>
                                 <!--end::Search-->
                             </div>
-                            <!--end::Search-->
-
-                            <!--begin::Quick links-->
-                            <div class="app-navbar-item ms-1">
-                                <!--begin::Menu- wrapper-->
-
-
-                                <!--begin::Menu-->
-                                <div class="menu menu-sub menu-sub-dropdown menu-column w-250px w-lg-325px"
-                                    data-kt-menu="true">
-                                    <!--begin::Heading-->
-                                    <div class="d-flex flex-column flex-center bgi-no-repeat rounded-top px-9 py-10"
-                                        style="background-image:url('../assets/media/misc/menu-header-bg.jpg')">
-                                        <!--begin::Title-->
-                                        <h3 class="text-white fw-semibold mb-3">
-                                            Quick Links
-                                        </h3>
-                                        <!--end::Title-->
-
-                                        <!--begin::Status-->
-                                        <span class="badge bg-primary text-inverse-primary py-2 px-3">25 pending
-                                            tasks</span>
-                                        <!--end::Status-->
-                                    </div>
-                                    <!--end::Heading-->
-
-                                    <!--begin:Nav-->
-                                    <div class="row g-0">
-
-                                    </div>
-                                    <!--end:Nav-->
-
-                                    <!--begin::View more-->
-                                    <div class="py-2 text-center border-top">
-                                        <a href="../pages/user-profile/activity.html"
-                                            class="btn btn-color-gray-600 btn-active-color-primary">
-                                            View All
-                                            <i class="ki-duotone ki-arrow-right fs-5"><span class="path1"></span><span
-                                                    class="path2"></span></i> </a>
-                                    </div>
-                                    <!--end::View more-->
-                                </div>
-                                <!--end::Menu-->
-                                <!--end::Menu wrapper-->
-                            </div>
-                            <!--end::Quick links-->
 
                             <!--begin::User menu-->
                             <div class="app-navbar-item ms-1 ms-lg-3" id="kt_header_user_menu_toggle">
@@ -447,6 +225,10 @@
                                     <div class="d-flex fw-bold text-primary ms-0 menu-link"
                                         style="color: rgb(15, 15, 83) !important;">
                                        <a href="#" style="text-decoration: none; color: inherit;"><span>Training</span></a>
+                                    </div>
+                                    <div class="d-flex fw-bold text-primary ms-4 menu-link"
+                                        style="color: red !important;">
+                                       <a href="#" style="text-decoration: none; color: inherit;"><span>Messages | 10081</span></a>
                                     </div>
                                 </div>
                                 <div class="cursor-pointer symbol symbol-35px symbol-md-40px"
@@ -791,122 +573,191 @@
                                                 <!--begin::Stats-->
                                                 <div class="mt-n20 position-relative">
                                                     <!--begin::Row-->
-                                                    <div class="row g-3 g-lg-6 mt-10">
+                                                    <div class="row g-3 mt-10">
                                                         <!--begin::Col-->
-                                                        <div class="col-4 ">
+                                                        <div class="d-flex col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="#">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4 ">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-house fs-1 fw-bold text-primary text-center mt-6"><span
+                                                                                class="bi bi-house fs-1 fw-bold text-primary "><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
 
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1">Dashboard</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Dashboard</span>
                                                                     </div>
                                                                 </a>
                                                                 <!--end::Stats-->
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
-                                                            <!--begin::Items-->
+                                                       <div class="d-flex col-4 justify-content-center">
+                                                            
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer ">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Branches.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center  text-center">
                                                                         <span class="symbol-label">
-                                                                            <i
-                                                                                class="bi bi-fullscreen-exit fs-1 text-primary mt-6"><span
+                                                                            <i class="bi bi-fullscreen-exit fs-1 fw-bold text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
+                                                        
                                                                         </span>
                                                                     </div>
                                                                     <!--end::Symbol-->
 
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ms-2 ">Branches</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Branches</span>
                                                                     </div>
                                                                 </a>
                                                                 <!--end::Stats-->
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="d-flex col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Agents.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-person-plus fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-person-plus fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
                                                                     <!--end::Symbol-->
 
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ms-3">Agents</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Agents</span>
                                                                     </div>
                                                                     <!--end::Stats-->
                                                                 </a>
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer ">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Products.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
-                                                                            <i class="bi bi-box fs-1 text-primary mt-6"><span
+                                                                            <i class="bi bi-box fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
                                                                     <!--end::Symbol-->
 
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ms-2">Products</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Products</span>
                                                                     </div>
                                                                 </a>
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
+                                                                <a href="Quotation.html">
+                                                                    <!--begin::Symbol-->
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
+                                                                        <span class="symbol-label">
+                                                                            <i class="bi bi-box fs-1 text-primary"><span
+                                                                                    class="path1"></span><span
+                                                                                    class="path2"></span></i>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Symbol-->
+
+                                                                    <div class="text-center">
+                                                                        <span
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Quotation</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <!--end::Items-->
+                                                        </div>
+                                                        <div class="col-4 justify-content-center">
+                                                            <!--begin::Items-->
+                                                            <div
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
+                                                                <a href="risknote.html">
+                                                                    <!--begin::Symbol-->
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
+                                                                        <span class="symbol-label">
+                                                                            <i class="bi bi-box fs-1 text-primary"><span
+                                                                                    class="path1"></span><span
+                                                                                    class="path2"></span></i>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Symbol-->
+
+                                                                    <div class="text-center">
+                                                                        <span
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Risknote</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <!--end::Items-->
+                                                        </div>
+                                                        <div class="col-4 justify-content-center">
+                                                            <!--begin::Items-->
+                                                            <div
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
+                                                                <a href="renewals.html">
+                                                                    <!--begin::Symbol-->
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
+                                                                        <span class="symbol-label">
+                                                                            <i class="bi bi-box fs-1 text-primary"><span
+                                                                                    class="path1"></span><span
+                                                                                    class="path2"></span></i>
+                                                                        </span>
+                                                                    </div>
+                                                                    <!--end::Symbol-->
+
+                                                                    <div class="text-center">
+                                                                        <span
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Renawals</span>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <!--end::Items-->
+                                                        </div>
+                                                        <div class="col-4 justify-content-center">
+                                                            <!--begin::Items-->
+                                                            <div
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Transaction.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-briefcase fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-briefcase fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ">Tansaction</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Tansaction</span>
                                                                     </div>
                                                                 </a>
                                                                 <!--end::Symbol-->
@@ -914,185 +765,185 @@
 
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer ">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Report.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-file-earmark-medical fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-file-earmark-medical fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
 
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ms-2">Reports</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Reports</span>
                                                                     </div>
                                                                 </a>
                                                                 <!--end::Symbol-->
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Customer.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-person fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-person fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ">Customers</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Customers</span>
                                                                     </div>
                                                                 </a>
                                                                 <!--end::Symbol-->
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Claims.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-arrow-clockwise fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-arrow-clockwise fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ms-4">Claims</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Claims</span>
                                                                     </div>
                                                                     <!--end::Symbol-->
                                                                 </a>
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer ">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Profoma.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-file-earmark-break fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-file-earmark-break fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1 ms-2">Profoma</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Profoma</span>
                                                                     </div>
                                                                     <!--end::Symbol-->
                                                                 </a>
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Download.html">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-download fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-download fs-1 text-primary"><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1">Download</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Download</span>
                                                                     </div>
                                                                 </a>
                                                                 <!--end::Symbol-->
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="#">
                                                                     <!--begin::Symbol-->
-                                                                    <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                    <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                         <span class="symbol-label">
                                                                             <i
-                                                                                class="bi bi-chat-left-text fs-1 text-primary mt-6"><span
+                                                                                class="bi bi-chat-left-text fs-1 text-primary "><span
                                                                                     class="path1"></span><span
                                                                                     class="path2"></span></i>
                                                                         </span>
                                                                     </div>
-                                                                    <div class="m-0">
+                                                                    <div class="text-center">
                                                                         <span
-                                                                            class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 mb-1">Messages</span>
+                                                                            class="text-gray-700 fw-bolder d-block fs-9">Messages</span>
                                                                     </div>
                                                                     <!--end::Symbol-->
                                                                 </a>
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <a href="Cancellation.html">
                                                                 <!--begin::Symbol-->
-                                                                <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                     <span class="symbol-label">
                                                                         <i
-                                                                            class="bi bi-x-square fs-1 text-primary mt-6"><span
+                                                                            class="bi bi-x-square fs-1 text-primary"><span
                                                                                 class="path1"></span><span
                                                                                 class="path2"></span></i>
                                                                     </span>
                                                                 </div>
-                                                                <div class="m-0">
+                                                                <div class="text-center">
                                                                     <span
-                                                                        class="text-gray-700 fw-bolder d-block fs-9 lh-1 ls-n1 ms-1">Cancellation</span>
+                                                                        class="text-gray-700 fw-bolder d-block fs-9">Cancellation</span>
                                                                 </div>
                                                                 <!--end::Symbol-->
                                                                 </a>
                                                             </div>
                                                             <!--end::Items-->
                                                         </div>
-                                                        <div class="col-4">
+                                                        <div class="col-4 justify-content-center">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <!--begin::Symbol-->
                                                                 <a href="Commission.html">
-                                                                <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                     <span class="symbol-label">
                                                                         <i
-                                                                            class="bi bi-award fs-1 text-primary mt-6"><span
+                                                                            class="bi bi-award fs-1 text-primary"><span
                                                                                 class="path1"></span><span
                                                                                 class="path2"></span></i>
                                                                     </span>
                                                                 </div>
-                                                                <div class="m-0">
+                                                                <div class="text-center">
                                                                     <span
-                                                                        class="text-gray-700 fw-bolder d-block fs-9 lh-1 ls-n1">Commission</span>
+                                                                        class="text-gray-700 fw-bolder d-block fs-9">Commission</span>
                                                                 </div>
                                                                 <!--end::Symbol-->
                                                                 </a>
@@ -1102,20 +953,20 @@
                                                         <div class="col-4">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <!--begin::Symbol-->
                                                                 <a href="#">
-                                                                <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                     <span class="symbol-label">
                                                                         <i
-                                                                            class="bi bi-gear fs-1 text-primary mt-6"><span
+                                                                            class="bi bi-gear fs-1 text-primary"><span
                                                                                 class="path1"></span><span
                                                                                 class="path2"></span></i>
                                                                     </span>
                                                                 </div>
-                                                                <div class="m-0">
+                                                                <div class="text-center">
                                                                     <span
-                                                                        class="text-gray-700 fw-bolder d-block fs-8 lh-1 ls-n1 ms-3">Settings</span>
+                                                                        class="text-gray-700 fw-bolder d-block fs-9">Settings</span>
                                                                 </div>
                                                                 <!--end::Symbol-->
                                                                 </a>
@@ -1125,20 +976,20 @@
                                                         <div class="col-4">
                                                             <!--begin::Items-->
                                                             <div
-                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer">
+                                                                class="bg-gray-100 bg-opacity-70 rounded-2 px-6 py-5 shadow-lg cursor-pointer mt-3 w-100">
                                                                 <!--begin::Symbol-->
                                                                 <a href="#">
-                                                                <div class="symbol symbol-30px me-5 mb-8 ms-4">
+                                                                <div class="symbol symbol-30px mb-4 d-flex justify-content-center align-items-center">
                                                                     <span class="symbol-label">
                                                                         <i
-                                                                            class="bi bi-bell fs-1 text-primary mt-6"><span
+                                                                            class="bi bi-bell fs-1 text-primary"><span
                                                                                 class="path1"></span><span
                                                                                 class="path2"></span></i>
                                                                     </span>
                                                                 </div>
-                                                                <div class="m-0">
+                                                                <div class="text-center">
                                                                     <span
-                                                                        class="text-gray-700 fw-bolder d-block fs-9 lh-1 ls-n1 ms-1">Notifications</span>
+                                                                        class="text-gray-700 fw-bolder d-block fs-9">Notifications</span>
                                                                 </div>
                                                                 <!--end::Symbol-->
                                                                 </a>

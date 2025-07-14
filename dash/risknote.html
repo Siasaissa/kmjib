@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Risknote</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="board_files/risknote.css" rel="stylesheet">
+</head>
+<body>
+  <div class="d-flex container py-5" style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Ultra Premium Risk Header -->
+    <div class="risk-header text-white p-4 mb-5">
+      <div class="position-relative z-1">
+        <div class="d-flex justify-content-between align-items-start flex-wrap">
+          <div class="mb-4 mb-md-0">
+            <div class="d-flex align-items-center mb-3">
+              <h1 class="h2 mb-0">
+                <i class="bi bi-shield-shaded section-icon me-3"></i> 
+                Risk Assessment
+              </h1>
+              <span class="status-badge bg-white text-primary-dark ms-3 text-warning">UNDER REVIEW</span>
+            </div>
+            <div class="d-flex flex-wrap gap-4">
+              <div>
+                <small class="text-white-80 d-block">Reference</small>
+                <div class="fw-semibold fs-5">RN-2023-00428</div>
+              </div>
+              <div>
+                <small class="text-white-80 d-block">Client</small>
+                <div class="fw-semibold fs-5">Kimjib Co. Ltd</div>
+              </div>
+              <div>
+                <small class="text-white-80 d-block">Policy Type</small>
+                <div class="fw-semibold fs-5">Marine Cargo</div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-end">
+            <div class="text-end mb-3">
+              <small class="text-white-80 d-block">Created</small>
+              <div class="fw-semibold">10-Nov-2023</div>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="btn btn-sm btn-dark" onclick="document.body.classList.toggle('dark-mode')">
+                <i class="bi bi-moon-stars-fill"></i> Dark Mode
+                </button>
+              <button class="btn btn-sm btn-outline-light rounded-pill px-3">
+                <i class="bi bi-printer me-1"></i> Print
+              </button>
+              <button class="btn btn-sm btn-outline-light rounded-pill px-3">
+                <i class="bi bi-share me-1"></i> Share
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Navigation Tabs -->
+    <ul class="nav nav-pills mb-5">
+      <li class="nav-item">
+        <a class="nav-link active" href="#risk-details" data-bs-toggle="pill">
+          <i class="bi bi-clipboard2-pulse"></i> Risk Details
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#underwriting" data-bs-toggle="pill">
+          <i class="bi bi-clipboard2-check"></i> Underwriting
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#documents" data-bs-toggle="pill">
+          <i class="bi bi-file-earmark-text"></i> Documents
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#history" data-bs-toggle="pill">
+          <i class="bi bi-clock-history"></i> History
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#analysis" data-bs-toggle="pill">
+          <i class="bi bi-graph-up"></i> Analytics
+        </a>
+      </li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Risk Details Tab -->
+      <div class="tab-pane fade show active" id="risk-details">
+        <div class="row">
+          <!-- Left Column -->
+          <div class="col-lg-8">
+            <!-- Risk Overview Card -->
+            <div class="card mb-4 fade-in" style="animation-delay: 0.1s">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="section-title mb-0 d-flex align-items-center">
+                  <i class="bi bi-info-circle section-icon"></i> 
+                  <span>Risk Overview</span>
+                </h5>
+                <span class="badge bg-primary">Active Review</span>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="risk-info-card p-3 mb-3 bg-light rounded">
+                      <small class="text-muted d-block">Risk Category</small>
+                      <div class="fw-semibold">Marine - Ocean Cargo</div>
+                    </div>
+                    <div class="risk-info-card p-3 mb-3 bg-light rounded">
+                      <small class="text-muted d-block">Coverage Type</small>
+                      <div class="fw-semibold">All Risks</div>
+                    </div>
+                    <div class="risk-info-card p-3 mb-3 bg-light rounded">
+                      <small class="text-muted d-block">Geographic Scope</small>
+                      <div class="fw-semibold">Dar es Salaam to Mombasa</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="risk-info-card p-3 mb-3 bg-light rounded">
+                      <small class="text-muted d-block">Sum Insured</small>
+                      <div class="fw-semibold">Tzs 5,000,000</div>
+                    </div>
+                    <div class="risk-info-card p-3 mb-3 bg-light rounded">
+                      <small class="text-muted d-block">Risk Rating</small>
+                      <div>
+                        <span class="risk-indicator risk-medium"></span>
+                        <span class="fw-semibold">Medium Risk</span>
+                      </div>
+                    </div>
+                    <div class="risk-info-card p-3 mb-3 bg-light rounded">
+                      <small class="text-muted d-block">Proposed Premium</small>
+                      <div class="fw-semibold">Tzs 60,000 (1.2%)</div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Enhanced Risk Description -->
+                <div class="risk-description mt-4">
+                  <label class="form-label small text-muted">Risk Description</label>
+                  <div class="border rounded p-3 bg-light">
+                    <p>Coverage required for shipment of electronic goods (smartphones and tablets) from Dar es Salaam to Mombasa via ocean vessel. Goods will be packed in waterproof containers with shock-absorbent materials.</p>
+                    <ul class="mb-0">
+                      <li>Total 200 cartons with max value Tsh25,000 per carton</li>
+                      <li>Transit time approximately 5-7 days</li>
+                      <li>Vessel: MV Horizon (IMO 9876543)</li>
+                      <li>Expected departure: 15-Dec-2023</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coverage Details Card -->
+            <div class="card mb-4 fade-in" style="animation-delay: 0.2s">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="section-title mb-0 d-flex align-items-center">
+                  <i class="bi bi-shield-check section-icon"></i> 
+                  <span>Coverage Details</span>
+                </h5>
+                <button class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-plus"></i> Add Coverage
+                </button>
+              </div>
+              <div class="card-body p-0">
+                <div class="table-responsive">
+                  <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Coverage</th>
+                        <th>Limit</th>
+                        <th>Deductible</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="fw-semibold">Marine Cargo (All Risks)</div>
+                          <small class="text-muted">Primary coverage</small>
+                        </td>
+                        <td>Tzs 5M</td>
+                        <td>1% of loss</td>
+                        <td><span class="badge bg-success">Approved</span></td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="fw-semibold">War Risks</div>
+                          <small class="text-muted">Optional coverage</small>
+                        </td>
+                        <td>Tzs 2M</td>
+                        <td>2% of loss</td>
+                        <td><span class="badge bg-danger">Declined</span></td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="fw-semibold">Strikes & Civil Commotion</div>
+                          <small class="text-muted">Included</small>
+                        </td>
+                        <td>Tzs 1M</td>
+                        <td>1.5% of loss</td>
+                        <td><span class="badge bg-success">Approved</span></td>
+                        <td>
+                          <button class="btn btn-sm btn-outline-secondary">
+                            <i class="bi bi-pencil"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="col-lg-4">
+            <!-- Client Summary Card -->
+            <div class="card mb-4 fade-in" style="animation-delay: 0.3s">
+              <div class="card-header">
+                <h5 class="section-title mb-0 d-flex align-items-center">
+                  <i class="bi bi-building section-icon"></i> 
+                  <span>Client Summary</span>
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-4">
+              <div class="bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                <i class="bi bi-building fs-5"></i>
+              </div>
+              <div>
+                <h6 class="mb-0">Kimjib Co. Ltd</h6>
+                <small class="text-muted">Corporate Client Since 2018</small>
+              </div>
+            </div>
+
+                
+                <div class="client-details">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="bg-light rounded-circle  me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                      <i class="bi bi-person text-primary"></i>
+                    </div>
+                    <div>
+                      <small class="text-muted d-block">Primary Contact</small>
+                      <div class="fw-semibold">Mr. Jamal Mwinyi</div>
+                      <small class="text-muted">Procurement Manager</small>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="bg-light rounded-circle  me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                      <i class="bi bi-telephone text-primary"></i>
+                    </div>
+                    <div>
+                      <small class="text-muted d-block">Contact</small>
+                      <div class="fw-semibold">+255 784 123 456</div>
+                      <div class="fw-semibold">j.mwinyi@kimjib.co.tz</div>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex align-items-center">
+                    <div class="bg-light rounded-circle  me-3 d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;">
+                      <i class="bi bi-briefcase text-primary"></i>
+                    </div>
+                    <div>
+                      <small class="text-muted d-block">Business</small>
+                      <div class="fw-semibold">Maritime Transport</div>
+                      <div class="fw-semibold">Annual Revenue: Tsh25M</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Risk Matrix Card -->
+            <div class="card mb-4 fade-in" style="animation-delay: 0.4s">
+              <div class="card-header">
+                <h5 class="section-title mb-0 d-flex align-items-center">
+                  <i class="bi bi-speedometer2 section-icon"></i> 
+                  <span>Risk Matrix</span>
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="risk-matrix">
+                  <div class="risk-cell bg-success text-white">1</div>
+                  <div class="risk-cell bg-success text-white">2</div>
+                  <div class="risk-cell bg-warning text-dark">3</div>
+                  <div class="risk-cell bg-danger text-white">4</div>
+                  <div class="risk-cell bg-danger text-white">5</div>
+                  <div class="risk-cell bg-success text-white">2</div>
+                  <div class="risk-cell bg-warning text-dark">3</div>
+                  <div class="risk-cell bg-warning text-dark selected">4</div>
+                  <div class="risk-cell bg-danger text-white">5</div>
+                  <div class="risk-cell bg-danger text-white">6</div>
+                  <div class="risk-cell bg-warning text-dark">3</div>
+                  <div class="risk-cell bg-warning text-dark">4</div>
+                  <div class="risk-cell bg-danger text-white">5</div>
+                  <div class="risk-cell bg-danger text-white">6</div>
+                  <div class="risk-cell bg-danger text-white">7</div>
+                </div>
+                
+                <div class="risk-metrics">
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="small text-muted">Loss Ratio (3Y)</span>
+                      <span class="small fw-semibold">42%</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                      <div class="progress-bar bg-success" style="width: 42%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="small text-muted">Claim Frequency</span>
+                      <span class="small fw-semibold">Medium</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                      <div class="progress-bar bg-warning" style="width: 65%"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-0">
+                    <div class="d-flex justify-content-between mb-1">
+                      <span class="small text-muted">Compliance Score</span>
+                      <span class="small fw-semibold">88/100</span>
+                    </div>
+                    <div class="progress" style="height: 8px;">
+                      <div class="progress-bar bg-info" style="width: 88%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Other tabs would go here with similar enhancements -->
+      
+    </div>
+    
+    <!-- Premium Floating Action Button -->
+   <button id="openQuickActions" class="floating-action-btn pulse" data-bs-toggle="tooltip" data-bs-placement="left" title="Quick Actions">
+    <i class="bi bi-lightning"></i>
+    </button>
+
+    
+    <!-- Enhanced Footer Actions -->
+    <div class="d-flex justify-content-between mt-5 pt-3 border-top">
+      <a href="index.html">
+      <button class="btn btn-outline-secondary rounded-pill px-4 py-2">
+        <i class="bi bi-arrow-left me-2"></i> Back to Dashboard
+      </button>
+      </a>
+      <div class="d-flex gap-3">
+        <button class="btn btn-outline-primary rounded-pill px-4 py-2">
+          <i class="bi bi-save me-2"></i> Save Draft
+        </button>
+        <button class="btn btn-primary rounded-pill px-4 py-2">
+          <i class="bi bi-send-check me-2"></i> Submit for Approval
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Template -->
+<div class="modal fade" id="quickActionsModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title"><i class="bi bi-lightning-charge-fill me-2"></i> Quick Actions</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <ul class="list-group">
+          <li class="list-group-item"><i class="bi bi-file-earmark-plus me-2 text-primary"></i> New Risk Assessment</li>
+          <li class="list-group-item"><i class="bi bi-search me-2 text-primary"></i> Client Lookup</li>
+          <li class="list-group-item"><i class="bi bi-chat-dots me-2 text-primary"></i> Underwriter Chat</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    
+  document.addEventListener('DOMContentLoaded', function () {
+    const quickBtn = document.getElementById('openQuickActions');
+    const quickModal = new bootstrap.Modal(document.getElementById('quickActionsModal'));
+
+    quickBtn?.addEventListener('click', function () {
+      quickModal.show();
+    });
+  });
+
+  </script>
+<!--button action-->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Create modal backdrop element (hidden by default)
+    const modalBackdrop = document.createElement('div');
+    modalBackdrop.className = 'modal-backdrop';
+    modalBackdrop.style.cssText = `
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+    `;
+    document.body.appendChild(modalBackdrop);
+
+    // Create modal content template
+    const modalContent = document.createElement('div');
+    modalContent.className = 'modal-content';
+    modalContent.style.cssText = `
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        max-width: 500px;
+        width: 80%;
+        position: relative;
+    `;
+    
+    // Close button for modal
+    const closeButton = document.createElement('button');
+    closeButton.className = 'modal-close';
+    closeButton.textContent = '×';
+    closeButton.style.cssText = `
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    `;
+    
+    // Modal title
+    const modalTitle = document.createElement('h2');
+    modalTitle.className = 'modal-title';
+    modalTitle.style.marginBottom = '15px';
+    
+    // Modal body
+    const modalBody = document.createElement('div');
+    modalBody.className = 'modal-body';
+    
+    // Assemble modal
+    modalContent.appendChild(closeButton);
+    modalContent.appendChild(modalTitle);
+    modalContent.appendChild(modalBody);
+    modalBackdrop.appendChild(modalContent);
+
+    // Function to show modal
+    function showModal(title, content) {
+        modalTitle.textContent = title;
+        modalBody.innerHTML = content;
+        modalBackdrop.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Function to hide modal
+    function hideModal() {
+        modalBackdrop.style.display = 'none';
+        document.body.style.overflow = '';
+    }
+
+    // Close modal when clicking close button or backdrop
+    closeButton.addEventListener('click', hideModal);
+    modalBackdrop.addEventListener('click', function(e) {
+        if (e.target === modalBackdrop) hideModal();
+    });
+
+    // Make all buttons open modals
+    document.querySelectorAll('button').forEach(button => {
+        // Skip if already has modal behavior
+        if (button.classList.contains('modal-close')) return;
+        
+        button.addEventListener('click', function() {
+            const buttonText = button.textContent.trim();
+            let modalTitle = 'Button Action';
+            let modalContent = `You clicked the "${buttonText}" button`;
+            
+            // Special cases for different button types
+            if (button.classList.contains('btn-primary')) {
+                modalTitle = 'Primary Action';
+                modalContent = `Primary button "${buttonText}" was activated`;
+            } 
+            else if (button.classList.contains('btn-secondary')) {
+                modalTitle = 'Secondary Action';
+                modalContent = `Secondary button "${buttonText}" was clicked`;
+            }
+            else if (button.classList.contains('mobile-menu-button')) {
+                modalTitle = 'Menu';
+                modalContent = 'Mobile menu button was toggled';
+            }
+            
+            showModal(modalTitle, modalContent);
+        });
+    });
+
+    // Make all anchor tags that aren't links open modals
+    document.querySelectorAll('a:not([href^="http"]):not([href^="#"]):not([href^="/"])').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            showModal('Link Clicked', `You activated the "${link.textContent.trim()}" link`);
+        });
+    });
+});
+  
+</script>
+<!--end of button action-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
