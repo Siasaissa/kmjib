@@ -95,51 +95,58 @@
                     <h3 class="card-title align-items-start flex-column">
                         <span class="card-label fw-bold text-gray-800">Download</span>
 
-                        <span class="text-gray-500 mt-1 fw-semibold fs-6">The list of all download</span>
+                        <span class="text-gray-500 mt-1 fw-semibold fs-6">24 june 2025, Tuesday</span>
                     </h3>
+                    <!--end::Title-->
+
+                    <!--begin::Toolbar-->
                     <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                        <button class="btn btn-sm bg-danger "><a href="#" style="color: white;" ><i class="fas fa-download me-2"></i>Download</a></button>
+                        <p class="mt-4 me-4 fw-bold"> All Download</p>
+                        <button class="btn btn-sm bg-danger "><a href="#" style="color: white;" ><i class="bi bi-download me-2"></i>Download all</a></button>
                     </div>
 
                     <!--end::Toolbar-->
                 </div>
                 <div class="card-body pt-6">
-                    <div class="bg-gray-100 rounded border p-4">
-                        <h4 class="mb-4">Filter Cover Note</h4>
+                    <!--begin::Table container-->
+                    <div class="table-responsive">
+                        <!--begin::Table-->
+                        <table class="table table align-items-center border-danger" style=".border-light-danger {border-color: #f8d7da !important; } font-family: Geneva !important; ">
+                            <!--begin::Table head-->
+                            <thead>
+                                <tr class="fs-4 fw-bold text-dark border-bottom-2 ">
+                                    <th class=" min-w-100px text-center ">S/No</th>
+                                    <th class=" min-w-100px text-center ">Name</th>
+                                    <th class=" min-w-100px text-center ">Insurance</th>
+                                    <th class=" min-w-100px text-center ">Expiry</th>
+                                    <th class=" min-w-100px text-center ">Status</th>
+                                    <th class=" min-w-100px text-center ">Download</th>
 
-                        <div class="row g-3">
-                            <div class="col-md-4">
-                                <label for="date" class="form-label">Filter by Date</label>
-                                <input type="date" class="form-control" id="date" name="date">
-                            </div>
+                                </tr>
+                            </thead>
+                            <!--end::Table head-->
 
-                            <div class="col-md-4">
-                                <label for="salesPoint" class="form-label">Filter by Sales Point</label>
-                                <select class="form-select" id="salesPoint">
-                                    <option selected>point 0</option>
-                                    <option>point 1</option>
-                                    <option>point 2</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-3">
-                                <label for="status" class="form-label">Filter by Status</label>
-                                <select class="form-select" id="status">
-                                    <option selected>status 01</option>
-                                    <option>status 02</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-1">
-                                <div class="d-flex h-100 align-items-end">
-                                    <button class="btn btn-sm w-100 " style="background-color: #ffd363; margin-bottom: 5%;">Filter</button>
-                                </div>
-                            </div>
-                        </div>
+                            <!--begin::Table body-->
+                            <tbody>
+                                <tr class="fs-4 border-bottom-2">
+                                <td class="text-gray-600 fs-6 text-center">01</td>
+                                <td class="text-gray-600 fs-6 text-center">Ahmed Siasa</td>
+                                <td class="text-gray-600 fs-6 text-center">Health Insurance</td>
+                                <td class="text-gray-600 fs-6 text-center">2025-07-14</td>
+                                <td class="fs-6 text-center">
+                                    <span class="badge border border-warning text-primary d-inline-block text-center" style="width: 80px; color: orange !important;">
+                                    Pending
+                                    </span>
+                                </td>
+                                <td class="text-center d-flex justify-content-center gap-3">
+                                    <span><i class="bi bi-download fs-2 cursor-pointer me-4" style="color: #007bff !important;"></i></span>
+                                </td>
+                                </tr>
+                            </tbody>
+                            <!--end::Table body-->
+                        </table>
                     </div>
                 </div>
-
-
             </div>
 
         </div>

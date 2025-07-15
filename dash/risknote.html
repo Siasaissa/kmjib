@@ -44,9 +44,7 @@
               <div class="fw-semibold">10-Nov-2023</div>
             </div>
             <div class="d-flex gap-2">
-                <button class="btn btn-sm btn-dark" onclick="document.body.classList.toggle('dark-mode')">
-                <i class="bi bi-moon-stars-fill"></i> Dark Mode
-                </button>
+
               <button class="btn btn-sm btn-outline-light rounded-pill px-3">
                 <i class="bi bi-printer me-1"></i> Print
               </button>
@@ -1834,32 +1832,7 @@
     });
 
     // Make all buttons open modals
-    document.querySelectorAll('button').forEach(button => {
-        // Skip if already has modal behavior
-        if (button.classList.contains('modal-close')) return;
-        
-        button.addEventListener('click', function() {
-            const buttonText = button.textContent.trim();
-            let modalTitle = 'Button Action';
-            let modalContent = `You clicked the "${buttonText}" button`;
-            
-            // Special cases for different button types
-            if (button.classList.contains('btn-primary')) {
-                modalTitle = 'Primary Action';
-                modalContent = `Primary button "${buttonText}" was activated`;
-            } 
-            else if (button.classList.contains('btn-secondary')) {
-                modalTitle = 'Secondary Action';
-                modalContent = `Secondary button "${buttonText}" was clicked`;
-            }
-            else if (button.classList.contains('mobile-menu-button')) {
-                modalTitle = 'Menu';
-                modalContent = 'Mobile menu button was toggled';
-            }
-            
-            showModal(modalTitle, modalContent);
-        });
-    });
+  
 
     // Make all anchor tags that aren't links open modals
     document.querySelectorAll('a:not([href^="http"]):not([href^="#"]):not([href^="/"])').forEach(link => {
