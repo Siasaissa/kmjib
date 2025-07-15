@@ -52554,3 +52554,22 @@ body {
     padding-top: 0;
   }
 }
+
+/* Custom popover styling */
+.popover {
+    max-width: 300px !important; /* Override Bootstrap's default */
+    border: 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.popover-body {
+    padding: 0 !important;
+}
+
+.popover-profile {
+    padding: 12px;
+}
+
+.popover-arrow {
+    display: none; /* Hide default arrow if desired */
+}

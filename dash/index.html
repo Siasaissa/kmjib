@@ -236,10 +236,33 @@
                                     data-kt-menu-placement="bottom-end">
 
                                     <!-- Begin: User Initials as Avatar -->
-                                    <div class="symbol-label bg-primary text-white fw-bold fs-4 d-flex align-items-center justify-content-center rounded-circle"
-                                        style="width: 50px; height: 50px;">
-                                        IM
-                                    </div>
+                                    <!-- Your initials div with popover attributes -->
+                                <div 
+                                    class="symbol-label bg-primary text-white fw-bold fs-4 d-flex align-items-center justify-content-center rounded-circle"
+                                    style="width: 50px; height: 50px; cursor: pointer;"
+                                    data-bs-toggle="popover" 
+                                    data-bs-trigger="hover"
+                                    data-bs-placement="right"
+                                    data-bs-html="true"
+                                    data-bs-content='
+                                        <div class="popover-profile">
+                                            <div class="d-flex align-items-center mb-2">
+
+                                                <div>
+                                                    <h6 class="mb-0">Ahmad Siasa</h6>
+                                                    <small class="text-muted">Software Developer</small>
+                                                </div>
+                                            </div>
+                                            <div class="row g-2">
+                                                <div class="col-6"><small><strong>Email:</strong><br>ahmed@humtech.co.tz</small></div>
+                                                <div class="col-6"><small><strong>Phone:</strong><br>0613 803662-</small></div>
+                                                <div class="col-6"><small><strong>Department:</strong><br>Development</small></div>
+                                                <div class="col-6"><small><strong>Joined:</strong><br>Jan 2020</small></div>
+                                            </div>
+                                        </div>
+                                    '>
+                                    AS
+                                </div>
 
                                     <!-- Optional: Status dot -->
                                     <div
@@ -3187,6 +3210,21 @@
                 "pageLength": 3 // Show only 5 rows per page
             });
         });
+        // Initialize popovers
+document.addEventListener('DOMContentLoaded', function() {
+    const popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+    popoverTriggerList.map(function (el) {
+        return new bootstrap.Popover(el, {
+            container: 'body',  // Ensures proper positioning
+            template: `
+                <div class="popover" role="tooltip">
+                    <div class="popover-arrow"></div>
+                    <div class="popover-body p-3"></div>
+                </div>
+            `
+        });
+    });
+});
     </script>
 
 

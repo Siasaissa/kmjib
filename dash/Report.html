@@ -130,15 +130,15 @@
                                     <td class="text-gray-600  fs-6">100,000.00</td>
                                     <td class="text-gray-600  fs-6">2025-07-14</td>
                                     <td>
-                                    <span class="badge border border-success text-success d-inline-block text-center" style="width: 80px;color: green;">
+                                    <span class="badge border border-success text-success d-inline-block text-center" style="width: 80px;color: green !important;" >
                                         Success
                                      </span>
                                     </td>
 
                                     <td class="text-center">
                                         <div class="d-flex justify-content-center align-items-center gap-3">
-                                            <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
-                                            <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                            <a href="#" class="text-primary" title="View" data-bs-toggle="modal" data-bs-target="#viewModal"><i class="bi bi-eye fs-2 me-4"></i></a>
+                                            <a href="#" class="text-secondary" title="Print" onclick="printDiv('printSection'); return false;"><i class="bi bi-printer fs-2"></i></a>
                                         </div>
                                     </td>
 
@@ -154,8 +154,70 @@
             </div>
 
         </div>
+
         <!--modal start-->
-        
+        <!-- View Modal -->
+                <!-- View Modal -->
+                <div class="modal fade" id="viewModal" tabindex="-1" aria-labelledby="viewModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md-custom">
+                    <div class="modal-content shadow-lg">
+                    <!-- Modal Header -->
+                     <div id="printSection">
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title fw-bold text-primary" id="viewModalLabel">Policy Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Modal Body -->
+                     
+                    <div class="modal-body">
+                        <div class="row gy-3">
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Client:</strong></p>
+                            <p class="text-muted">Ahmed Siasa</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Policy Number:</strong></p>
+                            <p class="text-muted">Pol1234</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Product:</strong></p>
+                            <p class="text-muted">Motor</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Insurer:</strong></p>
+                            <p class="text-muted">Heritage</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Region:</strong></p>
+                            <p class="text-muted">Dar Es Salaam</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Payment Method:</strong></p>
+                            <p class="text-muted">Mobile</p>
+                        </div>
+
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Premium:</strong></p>
+                            <p class="text-muted">100,000.00</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1"><strong>Date:</strong></p>
+                            <p class="text-muted">2025-07-14</p>
+                        </div>
+
+                        <div class="col-12">
+                            <p class="mb-1"><strong>Status:</strong></p>
+                            <span class="badge bg-success px-3 py-2">Success</span>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
             <!--modal end-->
 
             <!--begin::Global Javascript Bundle(mandatory for all pages)-->
@@ -211,6 +273,15 @@
                         "pageLength": 3 // Show only 5 rows per page
                     });
                 });
+                function printDiv(divId) {
+                const printContents = document.getElementById(divId).innerHTML;
+                const originalContents = document.body.innerHTML;
+                document.body.innerHTML = printContents;
+                window.print();
+                document.body.innerHTML = originalContents;
+                location.reload(); // Optional: reloads to restore event listeners/styles
+                }
+
             </script>
 
         </div>
