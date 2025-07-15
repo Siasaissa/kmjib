@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
   <link href="board_files/risknote.css" rel="stylesheet">
 </head>
 <body>
@@ -938,315 +939,315 @@
 </div>
 <!-- History Tab -->
 <div class="tab-pane fade" id="history">
-  <div class="row">
-    <!-- Main History Column -->
-    <div class="col-lg-8">
-      <!-- Timeline Card -->
-      <div class="card mb-4 fade-in" style="animation-delay: 0.1s">
-        <div class="card-header">
-          <h5 class="section-title mb-0 d-flex align-items-center">
-            <i class="bi bi-clock-history section-icon"></i> 
-            <span>Risk Timeline</span>
-          </h5>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Main History Column -->
+      <div class="col-lg-8">
+        <!-- Timeline Card -->
+        <div class="card mb-4 fade-in" style="animation-delay: 0.1s">
+          <div class="card-header">
+            <h5 class="section-title mb-0 d-flex align-items-center">
+              <i class="bi bi-clock-history section-icon"></i> 
+              <span>Risk Timeline</span>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-badge ">
+                  <i class="bi bi-file-earmark-plus"></i>
+                </div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between">
+                    <h6>Risk Assessment Created</h6>
+                    <small class="text-muted">10-Nov-2023 09:15</small>
+                  </div>
+                  <p>Initial risk assessment created by agent Sarah Johnson</p>
+                  <small class="text-muted">System generated</small>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-badge">
+                  <i class="bi bi-file-earmark-check"></i>
+                </div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between">
+                    <h6>Application Submitted</h6>
+                    <small class="text-muted">10-Nov-2023 11:42</small>
+                  </div>
+                  <p>Client completed and signed application form</p>
+                  <div class="d-flex align-items-center mt-2">
+                    <i class="bi bi-file-earmark-pdf text-danger me-2"></i>
+                    <small>Marine_Cargo_Application.pdf</small>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-badge">
+                  <i class="bi bi-chat-left-text"></i>
+                </div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between">
+                    <h6>Underwriter Note Added</h6>
+                    <small class="text-muted">11-Nov-2023 14:30</small>
+                  </div>
+                  <div class="border rounded p-3 ">
+                    <p>"Initial review shows standard risk profile. Waiting for packing list and value declaration documents to complete assessment."</p>
+                    <small class="text-muted">- John M., Underwriter</small>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-badge ">
+                  <i class="bi bi-file-earmark-arrow-up"></i>
+                </div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between">
+                    <h6>Supporting Documents Uploaded</h6>
+                    <small class="text-muted">12-Nov-2023 10:15</small>
+                  </div>
+                  <p>Client uploaded required supporting documents:</p>
+                  <ul class="mb-0">
+                    <li>Packing_List.docx</li>
+                    <li>Cargo_Value_Calculation.xlsx</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-badge">
+                  <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <div class="timeline-content">
+                  <div class="d-flex justify-content-between">
+                    <h6>Status Changed</h6>
+                    <small class="text-muted">12-Nov-2023 16:22</small>
+                  </div>
+                  <p>Risk status changed from <span class="badge bg-secondary">New</span> to <span class="badge bg-warning">Under Review</span></p>
+                  <small class="text-muted">System update</small>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-badge bg-primary">
-                <i class="bi bi-file-earmark-plus"></i>
-              </div>
-              <div class="timeline-content">
-                <div class="d-flex justify-content-between">
-                  <h6>Risk Assessment Created</h6>
-                  <small class="text-muted">10-Nov-2023 09:15</small>
+        
+        <!-- Comments & Notes -->
+        <div class="card fade-in" style="animation-delay: 0.2s">
+          <div class="card-header">
+            <h5 class="section-title mb-0 d-flex align-items-center">
+              <i class="bi bi-chat-left-text section-icon"></i> 
+              <span>Comments & Notes</span>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="comment-list mb-4">
+              <div class="comment-item mb-4">
+                <div class="d-flex">
+                  <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
+                      style="width: 70px; height: 48px; font-size: 18px; font-weight: 600;">
+                    JM
+                  </div>
+
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h6 class="mb-1">John Mwangi</h6>
+                      <small class="text-muted">11-Nov-2023 14:30</small>
+                    </div>
+                    <div class="comment-text p-3 bg-light rounded">
+                      <p class="mb-2">Initial review shows standard risk profile. Waiting for packing list and value declaration documents to complete assessment.</p>
+                      <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-primary me-2">Underwriting</span>
+                        <span class="badge bg-info text-dark">Note</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p>Initial risk assessment created by agent Sarah Johnson</p>
-                <small class="text-muted">System generated</small>
+              </div>
+              <div class="comment-item mb-4">
+                <div class="d-flex">
+                  <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; font-size: 18px; font-weight: 600;">SJ</div>
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h6>Sarah Johnson</h6>
+                      <small class="text-muted">12-Nov-2023 10:45</small>
+                    </div>
+                    <div class="comment-text p-3 bg-light rounded">
+                      <p>Documents uploaded as requested. Client confirmed departure date is firm for 15-Dec.</p>
+                      <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-secondary">Agent</span>
+                        <span class="badge bg-success">Update</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="comment-item">
+                <div class="d-flex">
+                  <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; font-size: 18px; font-weight: 600;">PM</div>
+                  <div>
+                    <div class="d-flex justify-content-between">
+                      <h6>Peter Mwangi</h6>
+                      <small class="text-muted">13-Nov-2023 09:15</small>
+                    </div>
+                    <div class="comment-text p-3 bg-light rounded">
+                      <p>Please confirm if container photos will be provided. This is required for full assessment.</p>
+                      <div class="d-flex align-items-center mt-2">
+                        <span class="badge bg-primary">Underwriting</span>
+                        <span class="badge bg-warning">Query</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
-            <div class="timeline-item">
-              <div class="timeline-badge bg-success">
-                <i class="bi bi-file-earmark-check"></i>
-              </div>
-              <div class="timeline-content">
-                <div class="d-flex justify-content-between">
-                  <h6>Application Submitted</h6>
-                  <small class="text-muted">10-Nov-2023 11:42</small>
+            <div class="add-comment">
+              <h6 class="mb-3">Add New Comment</h6>
+              <textarea class="form-control mb-3" rows="3" placeholder="Type your comment here..."></textarea>
+              <div class="d-flex justify-content-between">
+                <div>
+                  <select class="form-select form-select-sm" style="width: 150px;">
+                    <option>General Comment</option>
+                    <option>Underwriting Note</option>
+                    <option>Client Update</option>
+                    <option>Query</option>
+                  </select>
                 </div>
-                <p>Client completed and signed application form</p>
-                <div class="d-flex align-items-center mt-2">
-                  <i class="bi bi-file-earmark-pdf text-danger me-2"></i>
-                  <small>Marine_Cargo_Application.pdf</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-badge bg-info">
-                <i class="bi bi-chat-left-text"></i>
-              </div>
-              <div class="timeline-content">
-                <div class="d-flex justify-content-between">
-                  <h6>Underwriter Note Added</h6>
-                  <small class="text-muted">11-Nov-2023 14:30</small>
-                </div>
-                <div class="border rounded p-3 bg-light">
-                  <p>"Initial review shows standard risk profile. Waiting for packing list and value declaration documents to complete assessment."</p>
-                  <small class="text-muted">- John M., Underwriter</small>
-                </div>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-badge bg-success">
-                <i class="bi bi-file-earmark-arrow-up"></i>
-              </div>
-              <div class="timeline-content">
-                <div class="d-flex justify-content-between">
-                  <h6>Supporting Documents Uploaded</h6>
-                  <small class="text-muted">12-Nov-2023 10:15</small>
-                </div>
-                <p>Client uploaded required supporting documents:</p>
-                <ul class="mb-0">
-                  <li>Packing_List.docx</li>
-                  <li>Cargo_Value_Calculation.xlsx</li>
-                </ul>
-              </div>
-            </div>
-            
-            <div class="timeline-item">
-              <div class="timeline-badge bg-warning">
-                <i class="bi bi-arrow-repeat"></i>
-              </div>
-              <div class="timeline-content">
-                <div class="d-flex justify-content-between">
-                  <h6>Status Changed</h6>
-                  <small class="text-muted">12-Nov-2023 16:22</small>
-                </div>
-                <p>Risk status changed from <span class="badge bg-secondary">New</span> to <span class="badge bg-warning">Under Review</span></p>
-                <small class="text-muted">System update</small>
+                <button class="btn btn-primary">
+                  <i class="bi bi-send me-1"></i> Post Comment
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
       
-      <!-- Comments & Notes -->
-      <div class="card fade-in" style="animation-delay: 0.2s">
-        <div class="card-header">
-          <h5 class="section-title mb-0 d-flex align-items-center">
-            <i class="bi bi-chat-left-text section-icon"></i> 
-            <span>Comments & Notes</span>
-          </h5>
-        </div>
-        <div class="card-body">
-          <div class="comment-list mb-4">
-            <div class="container">
-            <div class="comment-item mb-4">
-              <div class="d-flex">
-                <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3"
-                    style="width: 70px; height: 48px; font-size: 18px; font-weight: 600;">
-                  JM
-                </div>
-
-                <div>
-                  <div class="d-flex justify-content-between">
-                    <h6 class="mb-1">John Mwangi</h6>
-                    <small class="text-muted">11-Nov-2023 14:30</small>
-                  </div>
-                  <div class="comment-text p-3 bg-light rounded">
-                    <p class="mb-2">Initial review shows standard risk profile. Waiting for packing list and value declaration documents to complete assessment.</p>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="badge bg-primary me-2">Underwriting</span>
-                      <span class="badge bg-info text-dark">Note</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="comment-item mb-4">
-              <div class="d-flex">
-                <div class="bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; font-size: 18px; font-weight: 600;">SJ</div>
-                <div>
-                  <div class="d-flex justify-content-between">
-                    <h6>Sarah Johnson</h6>
-                    <small class="text-muted">12-Nov-2023 10:45</small>
-                  </div>
-                  <div class="comment-text p-3 bg-light rounded">
-                    <p>Documents uploaded as requested. Client confirmed departure date is firm for 15-Dec.</p>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="badge bg-secondary">Agent</span>
-                      <span class="badge bg-success">Update</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="comment-item">
-              <div class="d-flex">
-                <div class="bg-warning text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 48px; height: 48px; font-size: 18px; font-weight: 600;">PM</div>
-                <div>
-                  <div class="d-flex justify-content-between">
-                    <h6>Peter Mwangi</h6>
-                    <small class="text-muted">13-Nov-2023 09:15</small>
-                  </div>
-                  <div class="comment-text p-3 bg-light rounded">
-                    <p>Please confirm if container photos will be provided. This is required for full assessment.</p>
-                    <div class="d-flex align-items-center mt-2">
-                      <span class="badge bg-primary">Underwriting</span>
-                      <span class="badge bg-warning">Query</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Right Column -->
+      <div class="col-lg-4">
+        <!-- Status History -->
+        <div class="card mb-4 fade-in" style="animation-delay: 0.3s">
+          <div class="card-header">
+            <h5 class="section-title mb-0 d-flex align-items-center">
+              <i class="bi bi-arrow-repeat section-icon"></i> 
+              <span>Status History</span>
+            </h5>
           </div>
-          
-          <div class="add-comment">
-            <h6 class="mb-3">Add New Comment</h6>
-            <textarea class="form-control mb-3" rows="3" placeholder="Type your comment here..."></textarea>
-            <div class="d-flex justify-content-between">
-              <div>
-                <select class="form-select form-select-sm" style="width: 150px;">
-                  <option>General Comment</option>
-                  <option>Underwriting Note</option>
-                  <option>Client Update</option>
-                  <option>Query</option>
-                </select>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-semibold">Under Review</div>
+                  <small class="text-muted">12-Nov-2023 16:22</small>
+                </div>
+                <span class="badge bg-warning">Current</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-semibold">Documentation Pending</div>
+                  <small class="text-muted">11-Nov-2023 14:30</small>
+                </div>
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-semibold">Application Submitted</div>
+                  <small class="text-muted">10-Nov-2023 11:42</small>
+                </div>
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div>
+                  <div class="fw-semibold">Draft Created</div>
+                  <small class="text-muted">10-Nov-2023 09:15</small>
+                </div>
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </li>
+            </ul>
+            
+            <div class="mt-4">
+              <h6 class="mb-3">Next Steps</h6>
+              <div class="alert alert-info">
+                <i class="bi bi-info-circle me-2"></i>
+                Awaiting container photos to complete assessment
               </div>
-              <button class="btn btn-primary">
-                <i class="bi bi-send me-1"></i> Post Comment
+              <button class="btn btn-sm btn-outline-primary w-100">
+                <i class="bi bi-skip-forward me-1"></i> Advance Status
               </button>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    
-    <!-- Right Column -->
-    <div class="col-lg-4">
-      <!-- Status History -->
-      <div class="card mb-4 fade-in" style="animation-delay: 0.3s">
-        <div class="card-header">
-          <h5 class="section-title mb-0 d-flex align-items-center">
-            <i class="bi bi-arrow-repeat section-icon"></i> 
-            <span>Status History</span>
-          </h5>
-        </div>
-        <div class="card-body">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div>
-                <div class="fw-semibold">Under Review</div>
-                <small class="text-muted">12-Nov-2023 16:22</small>
+        
+        <!-- User Activity -->
+        <div class="card fade-in" style="animation-delay: 0.4s">
+          <div class="card-header">
+            <h5 class="section-title mb-0 d-flex align-items-center">
+              <i class="bi bi-people section-icon"></i> 
+              <span>User Activity</span>
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="user-activity-item mb-4">
+              <div class="d-flex align-items-center mb-2">
+                <div class="avatar bg-primary text-white rounded-circle me-3">JM</div>
+                <div>
+                  <div class="fw-semibold">John Mwangi</div>
+                  <small class="text-muted">Underwriter</small>
+                </div>
               </div>
-              <span class="badge bg-warning">Current</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div>
-                <div class="fw-semibold">Documentation Pending</div>
-                <small class="text-muted">11-Nov-2023 14:30</small>
+              <div class="ps-5 ms-2">
+                <small class="text-muted">Last active: 13-Nov-2023 09:15</small>
+                <div class="mt-1">
+                  <span class="badge bg-primary">Assigned</span>
+                  <span class="badge bg-info">Reviewing</span>
+                </div>
               </div>
-              <i class="bi bi-check-circle-fill text-success"></i>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div>
-                <div class="fw-semibold">Application Submitted</div>
-                <small class="text-muted">10-Nov-2023 11:42</small>
-              </div>
-              <i class="bi bi-check-circle-fill text-success"></i>
-            </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <div>
-                <div class="fw-semibold">Draft Created</div>
-                <small class="text-muted">10-Nov-2023 09:15</small>
-              </div>
-              <i class="bi bi-check-circle-fill text-success"></i>
-            </li>
-          </ul>
-          
-          <div class="mt-4">
-            <h6 class="mb-3">Next Steps</h6>
-            <div class="alert alert-info">
-              <i class="bi bi-info-circle me-2"></i>
-              Awaiting container photos to complete assessment
             </div>
-            <button class="btn btn-sm btn-outline-primary w-100">
-              <i class="bi bi-skip-forward me-1"></i> Advance Status
+            
+            <div class="user-activity-item mb-4">
+              <div class="d-flex align-items-center mb-2">
+                <div class="avatar bg-success text-white rounded-circle me-3">SJ</div>
+                <div>
+                  <div class="fw-semibold">Sarah Johnson</div>
+                  <small class="text-muted">Agent</small>
+                </div>
+              </div>
+              <div class="ps-5 ms-2">
+                <small class="text-muted">Last active: 12-Nov-2023 10:45</small>
+                <div class="mt-1">
+                  <span class="badge bg-secondary">Submitted</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="user-activity-item">
+              <div class="d-flex align-items-center mb-2">
+                <div class="avatar bg-light text-dark rounded-circle me-3">KM</div>
+                <div>
+                  <div class="fw-semibold">Kimjib Mwinyi</div>
+                  <small class="text-muted">Client</small>
+                </div>
+              </div>
+              <div class="ps-5 ms-2">
+                <small class="text-muted">Last active: 12-Nov-2023 10:15</small>
+                <div class="mt-1">
+                  <span class="badge bg-success">Documents Uploaded</span>
+                </div>
+              </div>
+            </div>
+            
+            <button class="btn btn-sm btn-outline-primary w-100 mt-4">
+              <i class="bi bi-person-plus me-1"></i> Assign User
             </button>
           </div>
         </div>
       </div>
-      
-      <!-- User Activity -->
-      <div class="card fade-in" style="animation-delay: 0.4s">
-        <div class="card-header">
-          <h5 class="section-title mb-0 d-flex align-items-center">
-            <i class="bi bi-people section-icon"></i> 
-            <span>User Activity</span>
-          </h5>
-        </div>
-        <div class="card-body">
-          <div class="user-activity-item mb-4">
-            <div class="d-flex align-items-center mb-2">
-              <div class="avatar bg-primary text-white rounded-circle me-3">JM</div>
-              <div>
-                <div class="fw-semibold">John Mwangi</div>
-                <small class="text-muted">Underwriter</small>
-              </div>
-            </div>
-            <div class="ps-5 ms-2">
-              <small class="text-muted">Last active: 13-Nov-2023 09:15</small>
-              <div class="mt-1">
-                <span class="badge bg-primary">Assigned</span>
-                <span class="badge bg-info">Reviewing</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="user-activity-item mb-4">
-            <div class="d-flex align-items-center mb-2">
-              <div class="avatar bg-success text-white rounded-circle me-3">SJ</div>
-              <div>
-                <div class="fw-semibold">Sarah Johnson</div>
-                <small class="text-muted">Agent</small>
-              </div>
-            </div>
-            <div class="ps-5 ms-2">
-              <small class="text-muted">Last active: 12-Nov-2023 10:45</small>
-              <div class="mt-1">
-                <span class="badge bg-secondary">Submitted</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="user-activity-item">
-            <div class="d-flex align-items-center mb-2">
-              <div class="avatar bg-light text-dark rounded-circle me-3">KM</div>
-              <div>
-                <div class="fw-semibold">Kimjib Mwinyi</div>
-                <small class="text-muted">Client</small>
-              </div>
-            </div>
-            <div class="ps-5 ms-2">
-              <small class="text-muted">Last active: 12-Nov-2023 10:15</small>
-              <div class="mt-1">
-                <span class="badge bg-success">Documents Uploaded</span>
-              </div>
-            </div>
-          </div>
-          
-          <button class="btn btn-sm btn-outline-primary w-100 mt-4">
-            <i class="bi bi-person-plus me-1"></i> Assign User
-          </button>
-        </div>
-      </div>
     </div>
   </div>
-</div>
-<!-- Analytics Tab -->
+</div><!-- Analytics Tab -->
 <div class="tab-pane fade" id="analysis">
   <div class="row">
     <!-- Main Analytics Column -->
