@@ -126,12 +126,10 @@
                                     <button class="btn btn-sm btn-outline-light rounded-pill px-3">
                                         <i class="bi bi-printer me-1"></i> Print
                                     </button>
-                                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                                        <a href="#" style="color: white;">
-                                            <button class="btn btn-sm bg-danger text-white">
+                                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">                                       
+                                            <button class="btn btn-sm bg-danger text-white"  data-bs-toggle="modal" data-bs-target="#addBranchModal">
                                                 <i class="fas fa-plus text-white"></i> Add New Branch
                                             </button>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -177,8 +175,8 @@
                                             </span>
                                         </td>
                                         <td class="text-center gap-3">
-                                            <i class="bi bi-pencil-square fs-5 me-4 cursor-pointer text-warning"></i>
-                                            <i class="bi bi-trash fs-5 text-danger ms-4 cursor-pointer"
+                                            <i class="bi bi-pencil-square fs-5 me-4 cursor-pointer text-warning" data-bs-toggle="modal" data-bs-target="#editModal"></i>
+                                            <i class="bi bi-trash fs-5 text-danger ms-4 cursor-pointer" data-bs-toggle="modal" data-bs-target="#deleteModal"
                                                 style="color: #dc3545 !important;"></i>
                                         </td>
                                     </tr>
@@ -193,7 +191,137 @@
             </div>
         </div>
     </div>
+    <!--modal start-->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-warning text-white">
+                            <h5 class="modal-title" id="editModalLabel">Edit User Info</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <form>
+                            <div class="modal-body row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" value="Ahmed">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" value="+255712345678">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="email" class="form-control" value="Ahmed@humtech.co.tz">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">ID Type</label>
+                                    <input type="text" class="form-control" value="NIDA">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">ID Number</label>
+                                    <input type="text" class="form-control" value="1234567890123456">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" value="1990-06-20">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-select">
+                                        <option selected>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Category</label>
+                                    <input type="text" class="form-control" value="Company">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-warning ">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
+            <!--end of edit modal-->
+            <!--delete modal-->
+            <!-- DELETE MODAL -->
+            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="deleteModalLabel">Confirm Delete</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Are you sure you want to delete <strong>Ahmed</strong>'s record? This action cannot be
+                            undone.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!--modal end-->
+<!--add modal-->
+<!-- ADD BRANCH MODAL -->
+<div class="modal fade" id="addBranchModal" tabindex="-1" aria-labelledby="addBranchModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+    
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="addBranchModalLabel">Add New Branch</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      
+      <form>
+        <div class="modal-body row g-3 px-4">
+          <div class="col-md-6">
+            <label class="form-label">Branch Name</label>
+            <input type="text" class="form-control" placeholder="e.g. Dar HQ">
+          </div>
+          
+          <div class="col-md-6">
+            <label class="form-label">Region</label>
+            <input type="text" class="form-control" placeholder="e.g. Dar es Salaam">
+          </div>
+          
+          <div class="col-md-6">
+            <label class="form-label">Phone</label>
+            <input type="text" class="form-control" placeholder="e.g. 0613803662">
+          </div>
+          
+          <div class="col-md-6">
+            <label class="form-label">Manager</label>
+            <input type="text" class="form-control" placeholder="e.g. Ahmed">
+          </div>
+          
+          <div class="col-md-6">
+            <label class="form-label">Status</label>
+            <select class="form-select">
+              <option selected>Active</option>
+              <option>Inactive</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-footer px-4">
+          <button type="submit" class="btn btn-primary text-white">Add Branch</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--end add modal-->
     <!-- DataTable Scripts (place before closing body tag) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
