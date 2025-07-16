@@ -6,7 +6,7 @@
 :root,
 [data-bs-theme="light"] {
   --bs-blue: #d4141c;
-  --bs-indigo: #6610f2;
+  --bs-indigo: #0f087e;
   --bs-purple: #6f42c1;
   --bs-pink: #d4141c;
   --bs-red: #dc3545;
@@ -78,7 +78,7 @@
     rgba(255, 255, 255, 0.15),
     rgba(255, 255, 255, 0)
   );
-  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-font-sans-serif: "Poppins", sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -50358,7 +50358,7 @@ a:hover {
   --bs-app-header-sticky-box-shadow: none;
 }
 html {
-  font-family: Poppins;
+  font-family: "Poppins", sans-serif;
   text-size-adjust: 100%;
 }
 body,
@@ -50370,7 +50370,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   font-size: 13px !important;
   font-weight: 400;
-  font-family: Inter, Poppins;
+  font-family: "Poppins", sans-serif;
 }
 @media (max-width: 991.98px) {
   body,
