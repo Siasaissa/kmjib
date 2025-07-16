@@ -6,7 +6,7 @@
 
 
     <!-- <title>New SMS Portal</title> -->
-    <title>Renewals</title>
+    <title>Products</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
@@ -72,9 +72,11 @@
     <link href="./board_files/plugins.bundle.css" rel="stylesheet" type="text/css">
     <link href="./board_files/style.bundle.css" rel="stylesheet" type="text/css">
     <link href="./board_files/datatables.bundle.css" rel="stylesheet" type="text/css">
-    <link href="./board_files/style.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="board_files/product.css" rel="stylesheet" type="text/css">
-
+    <link href="board_files/risknote.css" rel="stylesheet">
     <style>
         @media (min-width: 576px) {
             .modal-md-custom {
@@ -86,35 +88,71 @@
 
 <body class="body">
     <div class="app-container container-xxl mt-4">
-        <div class="col-xl-12 ">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-10 col-12">
+                <div class="risk-header text-white p-4 mb-5">
+                    <div class="position-relative z-1">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <div class="mb-4 mb-md-0">
+                                <div class="d-flex align-items-center mb-3">
+                                    <h1 class="h2 mb-0">
+                                        <i class="bi bi-box fs-2 section-icon me-3"></i>
+                                        Renewals
+                                    </h1>
+                                </div>
+                                <div class="d-flex flex-wrap gap-4">
+                                    <div>
+                                        <small class="text-white-80 d-block">Reference</small>
+                                        <div class="fw-semibold fs-5">RN-2023-00428</div>
+                                    </div>
+                                    <div>
+                                        <small class="text-white-80 d-block">Client</small>
+                                        <div class="fw-semibold fs-5">Kimjib Co. Ltd</div>
+                                    </div>
+                                    <div>
+                                        <small class="text-white-80 d-block">Policy Type</small>
+                                        <div class="fw-semibold fs-5">Marine Cargo</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end">
+                                <div class="text-end mb-3">
+                                    <small class="text-white-80 d-block">Created</small>
+                                    <div class="fw-semibold">10-Nov-2023</div>
+                                </div>
+                                <div class="d-flex gap-2">
 
-            <!--begin::Table widget 14-->
-            <div class="card card-flush h-md-100">
-                <!--begin::Header-->
-                <div class="card-header pt-7">
-                    <!--begin::Title-->
-                    <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold text-gray-800">Renewals</span>
-
-                        <span class="text-gray-500 mt-1 fw-semibold fs-6">The list of all renewals</span>
-                    </h3>
-                    <!--end::Title-->
-
-                    <!--begin::Toolbar-->
-                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                        <button class="btn btn-sm bg-danger " onclick="openNewPolicyModal()"><a href="#" style="color: white;" ><i class="bi bi-plus-circle me-2"></i>New Policy</a></button>
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3">
+                                        <i class="bi bi-printer me-1"></i> Print
+                                    </button>
+                                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
+                                        <a href="#" style="color: white;">
+                                            <button class="btn btn-sm bg-danger text-white">
+                                                <i class="fas fa-plus text-white"></i> Add New Policy
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <!--end::Toolbar-->
                 </div>
-                <div class="card-body pt-6">
-                    <!--begin::Table container-->
-                    <div class="table-responsive">
-                        <!--begin::Table-->
-                        <table class="table table align-items-center border-danger" style=".border-light-danger {border-color: #f8d7da !important; } font-family: Geneva !important; ">
-                            <!--begin::Table head-->
+                <!--begin::Table widget 14-->
+                <div class="card card-flush h-md-100">
+                    <!--begin::Header-->
+                    <div class="card-header pt-7">
+
+                        <!--end::Toolbar-->
+                    </div>
+                    <div class="card-body pt-6">
+                        <!--begin::Table container-->
+                        <div class="table-responsive">
+                            <!--begin::Table-->
+                            <table class="table table align-items-center border-danger"
+                                style=".border-light-danger {border-color: #f8d7da !important; } font-family: Poppins !important; ">
+                                <!--begin::Table head-->
                             <thead>
-                                <tr class="fs-4 fw-bold text-dark border-bottom-2 ">
+                                <tr class="fs-5 fw-bold text-dark border-bottom-2 ">
                                     <th class=" min-w-100px text-center ">S/No</th>
                                     <th class=" min-w-100px text-center ">Client</th>
                                     <th class=" min-w-100px text-center ">Policy</th>
@@ -132,7 +170,7 @@
                             <!--begin::Table body-->
                             <tbody>
                                  
-                                <tr class="fs-4 border-bottom-2">
+                                <tr class=" border-bottom-2">
                                     <td class="text-gray-600 fs-6 text-center">01</td>
                                     <td class="text-gray-600 fs-6 text-center">Ahmed Siasa</td>
                                     <td class="text-gray-600 fs-6 text-center">POL1234</td>
@@ -140,7 +178,12 @@
                                     <td class="text-gray-600 fs-6 text-center">Heritage Insurance</td>
                                     <td class="text-gray-600 fs-6 text-center">2025-08-10</td>
                                     <td class="text-gray-600 fs-6 text-center">10,000.00</td>
-                                    <td class="text-warning fs-6 text-center">Due</td>
+                                    <td class="text-warning fs-6 text-center">
+                                        <span class="badge border border-warning text-warning d-inline-block text-center"
+                                                style="width: 80px; color: orange !important;">
+                                                Due   
+                                        </span>
+                                    </td>
                                     <td class="text-center">
                                     <button class="btn btn-sm text-success" onclick="openRenewModal('Ahmed Siasa')">
                                         <i class="bi bi-arrow-repeat fs-4"></i>
@@ -154,7 +197,7 @@
                                     </td>
                                 </tr>
 
-                                <tr class="fs-4 border-bottom-2">
+                                <tr class=" border-bottom-2">
                                     <td class="text-gray-600 fs-6 text-center">02</td>
                                     <td class="text-gray-600 fs-6 text-center">Zainab Mussa</td>
                                     <td class="text-gray-600 fs-6 text-center">POL5678</td>
@@ -162,7 +205,12 @@
                                     <td class="text-gray-600 fs-6 text-center">Jubilee Insurance</td>
                                     <td class="text-gray-600 fs-6 text-center">2025-07-25</td>
                                     <td class="text-gray-600 fs-6 text-center">45,000.00</td>
-                                    <td class="text-danger fs-6 text-center">Overdue</td>
+                                    <td class="text-warning fs-6 text-center">
+                                        <span class="badge border border-danger text-danger d-inline-block text-center"
+                                                style="width: 80px; color: red !important;">
+                                                Over Due  
+                                        </span>
+                                    </td>
                                     <td class="text-center">
                                     <button class="btn btn-sm text-success" onclick="openRenewModal('Zainab Mussa')">
                                         <i class="bi bi-arrow-repeat fs-4"></i>
@@ -176,7 +224,7 @@
                                     </td>
                                 </tr>
 
-                                <tr class="fs-4 border-bottom-2">
+                                <tr class=" border-bottom-2">
                                     <td class="text-gray-600 fs-6 text-center">03</td>
                                     <td class="text-gray-600 fs-6 text-center">Peter Mwakyusa</td>
                                     <td class="text-gray-600 fs-6 text-center">POL9101</td>
@@ -184,7 +232,12 @@
                                     <td class="text-gray-600 fs-6 text-center">Alliance Insurance</td>
                                     <td class="text-gray-600 fs-6 text-center">2025-09-01</td>
                                     <td class="text-gray-600 fs-6 text-center">120,000.00</td>
-                                    <td class="text-success fs-6 text-center">Active</td>
+                                    <td class="text-warning fs-6 text-center">
+                                        <span class="badge border border-success text-success d-inline-block text-center"
+                                                style="width: 80px; color: green !important;">
+                                                Active  
+                                        </span>
+                                    </td>
                                     <td class="text-center">
                                     <button class="btn btn-sm text-success" onclick="openRenewModal('Peter Mwakyusa')">
                                         <i class="bi bi-arrow-repeat fs-4"></i>
@@ -198,7 +251,7 @@
                                     </td>
                                 </tr>
 
-                                <tr class="fs-4 border-bottom-2">
+                                <tr class="border-bottom-2">
                                     <td class="text-gray-600 fs-6 text-center">04</td>
                                     <td class="text-gray-600 fs-6 text-center">Asha Juma</td>
                                     <td class="text-gray-600 fs-6 text-center">POL1122</td>
@@ -206,7 +259,12 @@
                                     <td class="text-gray-600 fs-6 text-center">Britam Insurance</td>
                                     <td class="text-gray-600 fs-6 text-center">2025-07-19</td>
                                     <td class="text-gray-600 fs-6 text-center">20,000.00</td>
-                                    <td class="text-warning fs-6 text-center">Due</td>
+                                    <td class="text-warning fs-6 text-center">
+                                        <span class="badge border border-success text-success d-inline-block text-center"
+                                                style="width: 80px; color: green !important;">
+                                                Active  
+                                        </span>
+                                    </td>
                                     <td class="text-center">
                                     <button class="btn btn-sm text-success" onclick="openRenewModal('Asha Juma')">
                                         <i class="bi bi-arrow-repeat fs-4"></i>
@@ -224,114 +282,12 @@
                             </tbody>
                             <!--end::Table body-->
                         </table>
+                        </div>
                     </div>
-                    <a href="index.html"><button class="btn btn-sm bg-danger" style="color: white;"><i class="bi bi-arrow-left ms-3">Back to Dashboard</i></button></a>
                 </div>
-                
-            </div>
-            
-        </div>
-        <!--modal start-->
 
-            
-            <div class="modal fade" id="renewModal" tabindex="-1" aria-labelledby="renewModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content p-3">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="renewModalLabel">Renew Policy</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                    <div class="mb-3">
-                        <label class="form-label">Client</label>
-                        <input type="text" class="form-control" id="renewClient" readonly>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">New Expiry Date</label>
-                        <input type="date" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Premium</label>
-                        <input type="text" class="form-control" placeholder="Tzs 0.00">
-                    </div>
-                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                    <button type="submit" class="btn btn-success w-100">Submit Renewal</button>
-                    </div>
-                    </form>
-                </div>
-                </div>
             </div>
-            </div>
-            <!-- View Modal -->
-            <div class="modal fade" id="viewModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Client Details</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Client: <span id="viewClient"></span></p>
-                    <!-- Add more info here -->
-                </div>
-                </div>
-            </div>
-            </div>
-            <!-- New Policy Modal -->
-            <div class="modal fade" id="newPolicyModal" tabindex="-1">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                <div class="modal-header bg-danger text-white">
-                    <h5 class="modal-title" style="color: white !important;">Create New Policy</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                        <label class="form-label">Client Name</label>
-                        <input type="text" class="form-control" required>
-                        </div>
-                        <div class="col-md-6">
-                        <label class="form-label">Policy Number</label>
-                        <input type="text" class="form-control" required>
-                        </div>
-                        <div class="col-md-6">
-                        <label class="form-label">Insurance Type</label>
-                        <select class="form-select">
-                            <option>Motor</option>
-                            <option>Health</option>
-                            <option>Fire</option>
-                            <option>Travel</option>
-                        </select>
-                        </div>
-                        <div class="col-md-6">
-                        <label class="form-label">Insurer</label>
-                        <input type="text" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                        <label class="form-label">Premium</label>
-                        <input type="number" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                        <label class="form-label">Start Date</label>
-                        <input type="date" class="form-control">
-                        </div>
-                        <div class="col-md-6">
-                        <label class="form-label">End Date</label>
-                        <input type="date" class="form-control">
-                        </div>
-                    </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-sm bg-gray-100" data-bs-dismiss="modal">Cancel</button>
-                    <button class="btn btn-sm bg-danger" style="color: white;">Save Policy</button>
-                </div>
-                </div>
-            </div>
-
+            <!--modal start-->
 
             <!--modal end-->
 
@@ -352,7 +308,6 @@
 
             <!--begin::Custom Javascript(used for this page only)-->
             <script src="../assets/js/widgets.bundle.js"></script>
-            <script src="../assets/js/custom/apps/chat/chat.js"></script>
             <script src="../assets/js/custom/utilities/modals/create-campaign.js"></script>
             <script src="../assets/js/custom/utilities/modals/users-search.js"></script>
             <!--begin::Global Javascript Bundle(mandatory for all pages)-->
@@ -388,22 +343,6 @@
                         "pageLength": 3 // Show only 5 rows per page
                     });
                 });
-                  function openViewModal(client) {
-                        document.getElementById('viewClient').textContent = client;
-                        const modal = new bootstrap.Modal(document.getElementById('viewModal'));
-                        modal.show();
-                    }
-
-                    function openRenewModal(client) {
-                        document.getElementById('renewClient').value = client;
-                        const modal = new bootstrap.Modal(document.getElementById('renewModal'));
-                        modal.show();
-                    }
-                    function openNewPolicyModal() {
-                    const modal = new bootstrap.Modal(document.getElementById('newPolicyModal'));
-                    modal.show();
-                    }
-
             </script>
 
         </div>

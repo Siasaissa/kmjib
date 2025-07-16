@@ -74,6 +74,11 @@
     <link href="./board_files/datatables.bundle.css" rel="stylesheet" type="text/css">
     <link href="./board_files/style.css" rel="stylesheet" type="text/css">
     <link href="board_files/product.css" rel="stylesheet" type="text/css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="board_files/product.css" rel="stylesheet" type="text/css">
+    <link href="board_files/risknote.css" rel="stylesheet">
     <style>
         @media (min-width: 576px) {
             .modal-md-custom {
@@ -85,24 +90,60 @@
 
 <body class="body">
     <div class="app-container container-xxl mt-4">
-        <div class="col-xl-12 ">
+        <div class="row justify-content-center">
+            <div class="col-lg-12 col-md-10 col-12">
+              <div class="risk-header text-white p-4 mb-5">
+                    <div class="position-relative z-1">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap">
+                            <div class="mb-4 mb-md-0">
+                                <div class="d-flex align-items-center mb-3">
+                                    <h1 class="h2 mb-0">
+                                        <i class="bi bi-briefcase fs-2 section-icon me-3"></i>
+                                        Transaction
+                                    </h1>
+                                </div>
+                                <div class="d-flex flex-wrap gap-4">
+                                    <div>
+                                        <small class="text-white-80 d-block">Reference</small>
+                                        <div class="fw-semibold fs-5">RN-2023-00428</div>
+                                    </div>
+                                    <div>
+                                        <small class="text-white-80 d-block">Client</small>
+                                        <div class="fw-semibold fs-5">Kimjib Co. Ltd</div>
+                                    </div>
+                                    <div>
+                                        <small class="text-white-80 d-block">Policy Type</small>
+                                        <div class="fw-semibold fs-5">Marine Cargo</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column align-items-end">
+                                <div class="text-end mb-3">
+                                    <small class="text-white-80 d-block">Created</small>
+                                    <div class="fw-semibold">10-Nov-2023</div>
+                                </div>
+                                <div class="d-flex gap-2">
 
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3">
+                                        <i class="bi bi-printer me-1"></i> Print
+                                    </button>
+                                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
+                                        <a href="#" style="color: white;">
+                                            <button class="btn btn-sm bg-danger text-white" onclick="openNewTransactionModal()">
+                                                <i class="fas fa-plus text-white"></i> Add New Transaction
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             <!--begin::Table widget 14-->
             <div class="card card-flush h-md-100">
                 <!--begin::Header-->
                 <div class="card-header pt-7">
-                    <!--begin::Title-->
-                    <h3 class="card-title align-items-start flex-column">
-                        <span class="card-label fw-bold text-gray-800">Transaction</span>
 
-                        <span class="text-gray-500 mt-1 fw-semibold fs-6">The list of all transaction</span>
-                    </h3>
-                    <!--end::Title-->
-
-                    <!--begin::Toolbar-->
-                    <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                        <button class="btn btn-sm bg-danger " onclick="openNewTransactionModal()"><a href="#" style="color: white;" ><i class="fas fa-plus"></i>Add New Transaction</a></button>
-                    </div>
 
                     <!--end::Toolbar-->
                 </div>
@@ -113,18 +154,18 @@
                         <table class="table table align-items-center border-danger" style=".border-light-danger {border-color: #f8d7da !important; } font-family: Geneva !important; ">
                             <!--begin::Table head-->
                             <thead>
-                            <tr class="fs-4 fw-bold text-dark border-bottom-2">
-                                <th class="min-w-80px text-center">S/No</th>
-                                <th class="min-w-150px text-center">Client</th>
-                                <th class="min-w-120px text-center">#Policy</th>
+                            <tr class="fs-5 fw-bold text-dark border-bottom-2 ">
+                                <th class="min-w-100px text-center">S/No</th>
+                                <th class="min-w-100px text-center">Client</th>
+                                <th class="min-w-100px text-center">#Policy</th>
                                 <th class="min-w-100px text-center">Vehicle</th>
-                                <th class="min-w-150px text-center">Company</th>
+                                <th class="min-w-100px text-center">Company</th>
                                 <th class="min-w-100px text-center">Region</th>
                                 <th class="min-w-100px text-center">Payment</th>
-                                <th class="min-w-120px text-center">Premium</th>
-                                <th class="min-w-150px text-center">Created At</th>
+                                <th class="min-w-100px text-center">Premium</th>
+                                <th class="min-w-100px text-center">Created At</th>
                                 <th class="min-w-100px text-center">Status</th>
-                                <th class="min-w-120px text-center">Action</th>
+                                <th class="min-w-100px text-center">Action</th>
                             </tr>
                             </thead>
 
@@ -132,7 +173,7 @@
 
                             <!--begin::Table body-->
                             <tbody>
-                            <tr class="fs-5 border-bottom-2">
+                            <tr class="text-gray-600 fs-6 text-center border-bottom-2">
                                 <td class="text-center">01</td>
                                 <td>Ahmed Siasa</td>
                                 <td>POL1234</td>
@@ -150,14 +191,14 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
-                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-4"></i></a>
+                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-4"></i></a>
                                     </div>
                                 </td>
 
                             </tr>
 
-                            <tr class="fs-5 border-bottom-2">
+                            <tr class="text-gray-600 fs-6 text-center border-bottom-2">
                                 <td class="text-center">02</td>
                                 <td>Aisha Bello</td>
                                 <td>POL5678</td>
@@ -174,13 +215,13 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
-                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-4"></i></a>
+                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-4"></i></a>
                                     </div>
                                 </td>
                             </tr>
 
-                            <tr class="fs-5 border-bottom-2">
+                            <tr class="text-gray-600 fs-6 text-center border-bottom-2">
                                 <td class="text-center">03</td>
                                 <td>John Peter</td>
                                 <td>POL9012</td>
@@ -197,8 +238,8 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-2"></i></a>
-                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-2"></i></a>
+                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-4"></i></a>
+                                        <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-4"></i></a>
                                     </div>
                                 </td>
                             </tr>
@@ -268,7 +309,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button class="btn btn-sm bg-success " ><a href="#" style="color: white;" ><i class="fas fa-plus"></i>Add New Transaction</a></button>
+                <button class="btn btn-sm bg-success text-white" ><i class="fas fa-plus"></i>Add New Transaction</button>
                 <button class="btn btn-sm bg-gray-100" data-bs-dismiss="modal">Close</button>
             </div>
             </div>
