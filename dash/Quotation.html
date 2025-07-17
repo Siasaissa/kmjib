@@ -385,9 +385,9 @@
                       </div>
                     </div>
 
-                    <style>
 
-                    </style>
+
+
 
                     <script>
                       document.addEventListener('DOMContentLoaded', function () {
@@ -518,7 +518,8 @@
                       <button type="button" class="btn  bg-warning me-2 text-white">
                         <i class="bi bi-eye me-2"></i>Preview
                       </button>
-                      <button type="submit" class="btn btn-primary text-white">
+                      <button type="submit" class="btn btn-primary text-white" data-bs-toggle="modal"
+                        data-bs-target="#captureReceipt">
                         <i class="bi bi-check-circle me-2"></i>Submit Quotation
                       </button>
                     </div>
@@ -590,6 +591,97 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="modal fade" id="captureReceipt" tabindex="-1" aria-labelledby="addAgentModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+          <div class="modal-header bg-danger text-white">
+            <h5 class="modal-title" id="addBranchModalLabel">Capture Receipt</h5>
+            <h6 class="modal-title ms-5" id="addBranchModalLabel">ControlNb: SPXZ1864000</h6>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <form>
+            <div class="modal-body row g-3 px-4">
+              <div class="col-md-4">
+                <label class="form-label">Quotation Number</label>
+                <input type="text" class="form-control" placeholder="e.g. 12430">
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Premium</label>
+                <input type="text" class="form-control" placeholder="e.g. 1,000,000.00">
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Premium Currency</label>
+                <input type="text" class="form-control" placeholder="e.g. TZS">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Mode</label>
+                <select class="form-select">
+                  <option selected>Please Select</option>
+                  <option>Mode1</option>
+                  <option>Mode2</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Reference No</label>
+                <input type="text" class="form-control" placeholder="e.g. 1111111121212">
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Issuer Bank</label>
+                <select class="form-select">
+                  <option selected>Please Select</option>
+                  <option>Bank1</option>
+                  <option>Bank2</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label">Collecting Bank</label>
+                <select class="form-select">
+                  <option selected>Please Select</option>
+                  <option>Bank1</option>
+                  <option>Bank2</option>
+                </select>
+              </div>
+
+              <div class="col-md-4">
+                <label class="form-label">Amount</label>
+                <input type="text" class="form-control" placeholder="e.g. 1,000,000.00">
+              </div>
+
+              <div class="col-md-2">
+                <label class="form-label">Currency</label>
+                <select class="form-select">
+                  <option selected>Tzs</option>
+                  <option>USD</option>
+                  <option>EUR</option>
+                </select>
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label">Exchange Rate</label>
+                <input type="text" class="form-control" placeholder="e.g. 1.00">
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label">Equivalent Amount</label>
+                <input type="text" class="form-control" placeholder="e.g. 1.00">
+              </div>
+            </div>
+
+            <div class="modal-footer px-4">
+              <button type="submit" class="btn btn-primary text-white">Proceed</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>
