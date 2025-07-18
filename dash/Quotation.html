@@ -84,6 +84,15 @@
                 max-width: 600px;
             }
         }
+            #toast-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1080;
+    }
+    .toast {
+      cursor: pointer;
+    }
     </style>
 </head>
 
@@ -97,7 +106,7 @@
                             <div class="mb-4 mb-md-0">
                                 <div class="d-flex align-items-center mb-3">
                                     <h1 class="h2 mb-0">
-                                        <i class="bi bi-fullscreen-exit fs-2 section-icon me-3"></i>
+                                        <i class="bi bi-archive fs-2 section-icon me-3"></i>
                                         Quotation
                                     </h1>
                                 </div>
@@ -203,7 +212,7 @@
                                             <i class="bi bi-pencil-square fs-6 me-2 ms-2 cursor-pointer"
                                                 style="color: orange !important;" data-bs-toggle="modal"
                                                 data-bs-target="#editModal"></i>
-                                            <i class="bi bi-box-arrow-in-down fs-6 text-danger ms-2 cursor-pointer"
+                                            <i class="bi bi-trash fs-6 text-danger ms-2 cursor-pointer"
                                                 style="color: #dc3545 !important;" data-bs-toggle="modal"
                                                 data-bs-target="#deleteModal"></i>
                                         </td>
@@ -232,7 +241,7 @@
                                             <i class="bi bi-pencil-square fs-6 me-2 ms-2 cursor-pointer"
                                                 style="color: orange !important;" data-bs-toggle="modal"
                                                 data-bs-target="#editModal"></i>
-                                            <i class="bi bi-box-arrow-in-down fs-6 text-danger ms-2 cursor-pointer"
+                                            <i class="bi bi-trash fs-6 text-danger ms-2 cursor-pointer"
                                                 style="color: #dc3545 !important;" data-bs-toggle="modal"
                                                 data-bs-target="#deleteModal"></i>
                                         </td>

@@ -191,7 +191,7 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-4"></i></a>
+                                        <a href="#" class="text-primary" title="View" data-bs-toggle="modal" data-bs-target="#more"><i class="bi bi-eye fs-4"></i></a>
                                         <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-4"></i></a>
                                     </div>
                                 </td>
@@ -215,7 +215,7 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-4"></i></a>
+                                        <a href="#" class="text-primary" title="View" data-bs-toggle="modal" data-bs-target="#more"><i class="bi bi-eye fs-4" ></i></a>
                                         <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-4"></i></a>
                                     </div>
                                 </td>
@@ -238,7 +238,7 @@
                                 </td>
                                 <td class="text-center">
                                     <div class="d-flex justify-content-center align-items-center gap-3">
-                                        <a href="#" class="text-primary" title="View"><i class="bi bi-eye fs-4"></i></a>
+                                        <a href="#" class="text-primary" title="View" data-bs-toggle="modal" data-bs-target="#more"><i class="bi bi-eye fs-4"></i></a>
                                         <a href="#" class="text-secondary" title="Print"><i class="bi bi-printer fs-4"></i></a>
                                     </div>
                                 </td>
@@ -315,6 +315,57 @@
             </div>
         </div>
         </div>
+        <div class="modal fade " id="more" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md-custom">
+            <!-- Optional: modal-lg for larger width -->
+            <div class="modal-content">
+
+                <div class="card card-flush h-md-100">
+                    <!--begin::Header-->
+                    <div class="card-header pt-7">
+                        <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="w-100 text-center mb-2 text-success">
+                            <h2>Details</h2>
+                        </div>
+                    </div>
+                    <div class="card-body pt-6">
+                        <div class="row align-items-start ms-4">
+                            <!-- Details Column -->
+                            <div class="col-md-8">
+                                <p><strong>Name:</strong> Mousa Doumba</p>
+                                <p><strong>Expired Date:</strong> 10 July 2025</p>
+                                <p><strong>Vehicle:</strong> Motor</p>
+                                <p><strong>Agent:</strong> Sidra Insurance Agency</p>
+                                <p><strong>Region:</strong> Dar es Salaam</p>
+                                <p><strong>Payment:</strong> Mobile</p>
+                                <p><strong>Premium:</strong> 59,000.00</p>
+                                <p><strong>Start Date:</strong> 09 June 2025</p>
+                                <p><strong>Created At:</strong> 2021-06-08 | 13:44:39</p>
+                            </div>
+
+                            <!-- QR and Button Column -->
+                            <div class="col-md-4 d-flex flex-column align-items-end" style="margin-top: -3%;">
+                                <img src="board_files/qr.png" alt="QRCode" class="img-fluid mb-3"
+                                    style="max-width: 200px; height: auto;">
+
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="board_files/TIRAlogo.png" alt="TIRA Logo"
+                                        style="width: 50px; height: auto;margin-left: -45%;">
+                                    <button class="btn btn-warning btn-sm px-4 d-flex" style="color: white;">Check
+                                        Status</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
             <!--modal end-->
