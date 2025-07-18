@@ -21,7 +21,7 @@
       background-color: #f8fafc;
       margin: 0;
       padding: 0;
-      height: 100%;
+      height: auto;
       color: var(--gray-dark);
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
