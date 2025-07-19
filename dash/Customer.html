@@ -85,6 +85,55 @@
                 max-width: 600px;
             }
         }
+
+        #toast-container {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1060;
+        }
+
+        .custom-toast {
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid;
+        }
+
+        .toast-success {
+            border-left-color: #198754;
+        }
+
+        .toast-warning {
+            border-left-color: #ffc107;
+        }
+
+        .toast-danger {
+            border-left-color: #dc3545;
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+
+        .toast-body {
+            font-size: 0.95rem;
+        }
+
+        .risk-header {
+            background-color: #dc3545;
+            border-radius: 0.5rem;
+        }
+
+        .section-icon {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+
+        .card-flush {
+            border-radius: 0.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
     </style>
 </head>
 
@@ -124,15 +173,16 @@
                                 </div>
                                 <div class="d-flex gap-2">
 
-                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3">
-                                        <i class="bi bi-printer me-1"></i> Print
-                                    </button>
+                                    <a href="index.html">
+                                        <button class="btn btn-sm btn-outline-light rounded-pill px-3">
+                                            <i class="bi bi-house me-1"></i> Dashboard
+                                        </button>
+                                    </a>
                                     <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                                        <a href="#" style="color: white;">
-                                            <button class="btn btn-sm bg-danger text-white">
-                                                <i class="fas fa-plus text-white"></i> Add New Customer
-                                            </button>
-                                        </a>
+                                        <button class="btn btn-sm bg-danger text-white" data-bs-toggle="modal"
+                                            data-bs-target="#addBranchModal">
+                                            <i class="fas fa-plus text-white"></i> Add New Customer
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -144,7 +194,7 @@
                     <!--begin::Header-->
                     <div class="card-header pt-7">
 
-
+                        <div id="toast-container"></div>
                     </div>
                     <div class="card-body pt-6">
                         <!--begin::Table container-->
@@ -194,7 +244,7 @@
                                         <td class="text-center gap-3">
                                             <!-- Icon that triggers modal -->
                                             <i class="bi bi-eye fs-4 me-2 cursor-pointer text-success"
-                                                data-bs-toggle="modal" data-bs-target="#viewModal"></i>
+                                                data-bs-toggle="modal" data-bs-target="#more"></i>
                                             <i class="bi bi-pencil-square fs-4 me-2 cursor-pointer"
                                                 style="color: orange !important;" data-bs-toggle="modal"
                                                 data-bs-target="#editModal"></i>
@@ -212,70 +262,17 @@
 
             </div>
             <!--modal start-->
-            <div class="modal fade " id="viewModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-md-custom">
-                    <!-- Optional: modal-lg for larger width -->
-                    <div class="modal-content">
-
-                        <div class="card card-flush h-md-100">
-                            <!--begin::Header-->
-                            <div class="card-header pt-7">
-                                <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="w-100 text-center mb-2 text-success">
-                                    <h2>Details</h2>
-                                </div>
-                            </div>
-                            <div class="card-body pt-6">
-                                <div class="row align-items-start ms-4">
-                                    <!-- Details Column -->
-                                    <div class="col-md-8">
-                                        <p><strong>Name:</strong> Mousa Doumba</p>
-                                        <p><strong>Expired Date:</strong> 10 July 2025</p>
-                                        <p><strong>Vehicle:</strong> Motor</p>
-                                        <p><strong>Agent:</strong> Sidra Insurance Agency</p>
-                                        <p><strong>Region:</strong> Dar es Salaam</p>
-                                        <p><strong>Payment:</strong> Mobile</p>
-                                        <p><strong>Premium:</strong> 59,000.00</p>
-                                        <p><strong>Start Date:</strong> 09 June 2025</p>
-                                        <p><strong>Created At:</strong> 2021-06-08 | 13:44:39</p>
-                                    </div>
-
-                                    <!-- QR and Button Column -->
-                                    <div class="col-md-4 d-flex flex-column align-items-center"
-                                        style="margin-top: -10;">
-                                        <img src="board_files/3d7d8d2bceb05603450e75812059aa79.jpg" alt="Profile"
-                                            class="img-fluid mb-3" style="max-width: 300px; height: auto;">
-
-                                        <div class="d-flex  gap-3">
-                                            <img src="board_files/TIRAlogo.png" alt="TIRA Logo"
-                                                style="width: 40px; height: auto;">
-                                            <button class="btn btn-warning btn-sm px-2" style="color: white;">Check
-                                                Status</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
 
             <!-- EDIT MODAL -->
             <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                        <div class="modal-header bg-warning text-white">
-                            <h5 class="modal-title" id="editModalLabel">Edit User Info</h5>
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="editModalLabel">Edit Customer Info</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
-                        <form>
+                        <form id="editForm">
                             <div class="modal-body row g-3">
                                 <div class="col-md-6">
                                     <label class="form-label">Full Name</label>
@@ -314,7 +311,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-warning ">Save Changes</button>
+                                <button type="submit" class="btn btn-primary text-white" data-bs-dismiss="modal">Save
+                                    Changes</button>
                             </div>
                         </form>
                     </div>
@@ -338,12 +336,140 @@
                             undone.
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
+                            <button type="button" class="btn btn-primary text-white" id="confirmDelete"
+                                data-bs-dismiss="modal">Delete</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="modal fade " id="more" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md-custom">
+                    <!-- Optional: modal-lg for larger width -->
+                    <div class="modal-content">
+
+                        <div class="card card-flush h-md-100">
+                            <!--begin::Header-->
+                            <div class="card-header pt-7">
+                                <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="w-100 text-center mb-2 text-success">
+                                    <h2><strong>Customer Details</strong></h2>
+                                </div>
+                            </div>
+                            <div class="card-body pt-4">
+                                <div class="row g-4 align-items-center">
+
+                                    <!-- Image and Logo Section (Left on desktop) -->
+                                    <div class="col-md-4 text-center">
+                                        <img src="board_files/3d7d8d2bceb05603450e75812059aa79.jpg" alt="Profile"
+                                            class="img-fluid rounded shadow-sm border mb-3"
+                                            style="max-height: 260px; object-fit: cover; width: 100%;">
+
+                                    </div>
+
+                                    <!-- Information Section (Right on desktop) -->
+                                    <div class="col-md-8">
+                                        <div class="bg-light p-3 rounded shadow-sm">
+                                            <div class="mb-2"><strong>Name:</strong> Ahmed Siasa</div>
+                                            <div class="mb-2"><strong>Phone:</strong> 0613803662</div>
+                                            <div class="mb-2"><strong>Expired Date:</strong> 10 July 2025</div>
+                                            <div class="mb-2"><strong>Company:</strong> Heritage Insurance</div>
+                                            <div class="mb-2"><strong>Vehicle:</strong> Motor - T123 ABC </div>
+                                            <div class="mb-2"><strong>Policy No:</strong> 1213224</div>
+                                            <div class="mb-2"><strong>Region:</strong> Dar es Salaam</div>
+                                            <div class="mb-2"><strong>Payment:</strong> Mobile</div>
+                                            <div class="mb-2"><strong>Start Date:</strong> 09 June 2025</div>
+                                            <div><strong>Created At:</strong> 2021-06-08 | 13:44:39</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="addBranchModal" tabindex="-1" aria-labelledby="addBranchModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+
+                        <div class="modal-header bg-danger text-white">
+                            <h5 class="modal-title" id="addBranchModalLabel">Add New Customer</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <form id="addBranchForm">
+                            <div class="modal-body row g-3 px-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" class="form-control" placeholder="e.g. Dar HQ">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" class="form-control" placeholder="e.g. 0613803662">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Email</label>
+                                    <input type="text" class="form-control" placeholder="e.g. ahmed@humtech.co.tz">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">ID Type</label>
+                                    <select class="form-select">
+                                        <option selected>NIDA</option>
+                                        <option>VOTE</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">ID Number</label>
+                                    <input type="text" class="form-control" placeholder="e.g. 89789749917342">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Gender</label>
+                                    <input type="text" class="form-control" placeholder="e.g. Male">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Birth</label>
+                                    <input type="text" class="form-control" placeholder="e.g. 	1990-06-20">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Type</label>
+                                    <select class="form-select">
+                                        <option selected>Company</option>
+                                        <option>Individual</option>
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Birth</label>
+                                    <input type="text" class="form-control" placeholder="e.g. 	1990-06-20">
+                                </div>
+
+
+
+                                <div class="modal-footer px-4">
+                                    <button type="submit" class="btn btn-primary text-white">Add Branch</button>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
 
             <!--end of delete modal-->
             <!--modal end-->
@@ -400,6 +526,74 @@
                     $('.table').DataTable({
                         "pageLength": 3 // Show only 5 rows per page
                     });
+                });
+            </script>
+            <script>
+                $(document).ready(function () {
+
+                    // Form submission handlers
+                    $('#editForm').on('submit', function (e) {
+                        e.preventDefault();
+                        $('#editModal').modal('hide');
+                        showNotification('Customer has been updated successfully', 'success');
+                    });
+
+                    $('#confirmDelete').on('click', function () {
+                        $('#deleteModal').modal('hide');
+                        showNotification('Customer has been deleted successfully', 'danger');
+                    });
+
+                    $('#addBranchForm').on('submit', function (e) {
+                        e.preventDefault();
+                        $('#addBranchModal').modal('hide');
+                        showNotification('Customer has been added successfully', 'success');
+                        // Reset form after submission
+                        this.reset();
+                    });
+
+                    // Toast notification function
+                    function showNotification(message, type) {
+                        const toastContainer = document.getElementById('toast-container');
+
+                        const toast = document.createElement('div');
+                        toast.className = `toast show align-items-center custom-toast toast-${type} bg-light border-0`;
+                        toast.setAttribute('role', 'alert');
+                        toast.setAttribute('aria-live', 'assertive');
+                        toast.setAttribute('aria-atomic', 'true');
+
+                        // Set icon based on type
+                        let icon = 'bi-info-circle';
+                        if (type === 'success') icon = 'bi-check-circle';
+                        if (type === 'danger') icon = 'bi-trash';
+                        if (type === 'warning') icon = 'bi-exclamation-triangle';
+
+                        toast.innerHTML = `
+                    <div class="d-flex align-items-center px-3 py-2">
+                        <i class="bi ${icon} toast-icon text-${type}"></i>
+                        <div class="toast-body">${message}</div>
+                        <button type="button" class="btn-close ms-auto me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                `;
+
+                        toastContainer.appendChild(toast);
+
+                        // Initialize Bootstrap Toast
+                        const bsToast = new bootstrap.Toast(toast, {
+                            autohide: true,
+                            delay: 3000
+                        });
+                        bsToast.show();
+
+                        // Remove toast after it's hidden
+                        toast.addEventListener('hidden.bs.toast', () => {
+                            toast.remove();
+                        });
+
+                        // Allow clicking to dismiss
+                        toast.addEventListener('click', () => {
+                            bsToast.hide();
+                        });
+                    }
                 });
             </script>
 

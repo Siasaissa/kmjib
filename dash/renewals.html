@@ -90,7 +90,7 @@
             top: 1rem;
             right: 1rem;
             z-index: 1060;
-            color: red;
+            color: green;
         }
 
         .custom-toast {
@@ -147,9 +147,11 @@
                                 <div class="d-flex gap-2">
                                     <!-- Toast Container -->
 
-                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3">
-                                        <i class="bi bi-printer me-1"></i> Print
-                                    </button>
+                                    <a href="index.html">
+                                        <button class="btn btn-sm btn-outline-light rounded-pill px-3">
+                                            <i class="bi bi-house me-1"></i> Dashboard
+                                        </button>
+                                    </a>
                                     <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
                                             <button class="btn btn-sm bg-danger text-white" data-bs-toggle="modal" data-bs-target="#addpolicyModal">
                                                 <i class="fas fa-plus text-white"></i> Add New Policy
@@ -323,46 +325,71 @@
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
     
-      <div class="modal-header bg-primary text-white">
-        <h5 class="modal-title" id="addBranchModalLabel">Add New Product</h5>
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="addBranchModalLabel">Add New Policy</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       
-      <form>
-        <div class="modal-body row g-3 px-4">
-          <div class="col-md-6">
-            <label class="form-label">Branch Name</label>
-            <input type="text" class="form-control" placeholder="e.g. Dar HQ">
-          </div>
-          
-          <div class="col-md-6">
-            <label class="form-label">Region</label>
-            <input type="text" class="form-control" placeholder="e.g. Dar es Salaam">
-          </div>
-          
-          <div class="col-md-6">
-            <label class="form-label">Phone</label>
-            <input type="text" class="form-control" placeholder="e.g. 0613803662">
-          </div>
-          
-          <div class="col-md-6">
-            <label class="form-label">Manager</label>
-            <input type="text" class="form-control" placeholder="e.g. Ahmed">
-          </div>
-          
-          <div class="col-md-6">
-            <label class="form-label">Status</label>
-            <select class="form-select">
-              <option selected>Active</option>
-              <option>Inactive</option>
-            </select>
-          </div>
-        </div>
+      <form id="addBranchForm">
+  <div class="modal-body row g-3 px-4">
+    
+    <div class="col-md-6">
+      <label class="form-label">Policy Number</label>
+      <input type="text" class="form-control" placeholder="e.g. POL-00123">
+    </div>
 
-        <div class="modal-footer px-4">
-          <button type="submit" class="btn btn-primary text-white">Add Product</button>
-        </div>
-      </form>
+    <div class="col-md-6">
+      <label class="form-label">Client Name</label>
+      <input type="text" class="form-control" placeholder="e.g. Ahmed Siasa">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Policy Type</label>
+      <select class="form-select">
+        <option value="">Select Type</option>
+        <option>Motor Insurance</option>
+        <option>Health Insurance</option>
+        <option>Marine Cargo</option>
+        <option>Fire & Burglary</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Sum Insured</label>
+      <input type="number" class="form-control" placeholder="e.g. 10,000,000">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Start Date</label>
+      <input type="date" class="form-control" >
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Expiry Date</label>
+      <input type="date" class="form-control">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Agent Code</label>
+      <input type="text" class="form-control" placeholder="e.g. AGT-7890">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Policy Status</label>
+      <select class="form-select">
+        <option selected>Active</option>
+        <option>Due</option>
+        <option>Over Due</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div class="modal-footer px-4">
+    <button type="submit" class="btn btn-primary text-white" data-bs-dismiss="modal">Add Policy</button>
+  </div>
+</form>
+
     </div>
   </div>
 </div>
@@ -470,6 +497,13 @@
                         bsToast.hide();
                     });
                 }
+                $('#addBranchForm').on('submit', function (e) {
+                        e.preventDefault();
+                        $('#addBranchModal').modal('hide');
+                        showNotification('Policy has been added successfully', 'success');
+                        // Reset form after submission
+                        this.reset();
+                    });
             </script>
 
         </div>

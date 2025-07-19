@@ -262,4 +262,27 @@
   color: #f8fafc !important;
 }
 
+        #toast-container {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 1060;
+            color: red;
+        }
+
+        .custom-toast {
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #0d6efd;
+        }
+
+        .toast-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+
+        .toast-body {
+            font-size: 0.95rem;
+        }
+
     
