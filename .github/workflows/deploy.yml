@@ -22,4 +22,4 @@ jobs:
 
     - name: 🚀 Deploy to cPanel Subdomain
       run: |
-        ssh -i ~/.ssh/id_rsa sudco@sud25.co.tz "cd public_html/kimjib.sud25.co.tz && git pull origin main"
+        ssh -i ~/.ssh/id_rsa sudco@sud25.co.tz "cd public_html/SURETECH Systems.sud25.co.tz && git pull origin main"
