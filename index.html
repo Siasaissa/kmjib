@@ -34,47 +34,64 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+  @media (max-width: 576px) {
+    .logo img {
+      height: 50px !important;
+    }
+  }
+</style>
+
 </head>
 
 <body class="index-page">
 
   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-end">
+  <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between flex-wrap">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <img src="dash/board_files/logo.png" alt="" >
-        <!--<h1 class="sitename">College</h1>-->
-      </a>
+    <!-- Logo -->
+    <!-- Logo -->
+<a href="index.html" class="logo d-flex align-items-center">
+  <img 
+    src="dash/board_files/logo.png" 
+    alt="Logo"
+    class="img-fluid d-block"
+    style="height: 150px;"
+  >
+</a>
 
-      <nav id="navmenu" class="navmenu d-flex justify-content-between align-items-center px-4">
-  <!-- Center navigation -->
-  <ul class="nav justify-content-center mx-auto me-5">
-    <li class="nav-item">
-      <a href="index.html" class="nav-link active">Home</a>
-    </li>
-    <li class="nav-item dropdown">
-      <a href="#" class="nav-link">
-        About
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="#" class="nav-link">Core Value</a>
-    </li>
-  </ul>
 
-  <!-- Right side buttons -->
-  <div class="col d-flex action-buttons">
-    <a href="Login/Responsive-Login-Form-master/register.html"><button class="btn btn-danger d-flex btn-lg-sm  ">Register</button></a>
-   <a href="Login/Responsive-Login-Form-master/index.html"> <button class="btn btn-secondary d-flex btn-lg-sm ms-4 " style="background-color: #06045f;">Login</button></a>
+    <!-- Navigation & Action Buttons -->
+    <nav id="navmenu" class="navmenu d-flex flex-wrap align-items-center justify-content-end ms-auto">
+
+      <!-- Navigation Menu -->
+      <ul class="nav justify-content-center mb-2 mb-lg-0 me-4">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Core Value</a>
+        </li>
+      </ul>
+
+      <!-- Right side buttons (responsive fix added) -->
+      <div class="d-flex flex-row flex-md-row align-items-center gap-2">
+  <a href="Login/Responsive-Login-Form-master/register.html" class="btn btn-danger px-4 py-2 text-white">Register</a>
+  <a href="Login/Responsive-Login-Form-master/index.html" class="btn text-white px-4 py-2" style="background-color: #06045f;">Login</a>
+</div>
+
+
+      <!-- Optional mobile menu icon (if needed) -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list ms-3"></i>
+
+    </nav>
+
   </div>
+</header>
 
-  <!-- Mobile nav toggle -->
-  <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-</nav>
-
-
-    </div>
-  </header>
 
   <main class="main">
 
@@ -103,7 +120,7 @@
               </div>
               <div class="action-buttons">
                 <a href="#" class="btn-primary">Agent Register</a>
-                <a href="#" class="btn-secondary" style="width: 20%; height: auto;">   Login  </a>
+                <a href="#" class="btn-secondary" >   Login  </a>
               </div>
             </div>
             <div class="col-lg-6 hero-media" data-aos="zoom-in" data-aos-delay="200">
@@ -301,16 +318,16 @@
       </div>
 
     </section><!-- /About Section -->
-    <div class="container section-title" data-aos="fade-up">
-        <h2>Partners</h2>
-      </div>
+    <div class="container section-title text-center" data-aos="fade-up">
+  <h2>Partners</h2>
+</div>
 
-    <div class="container align-items-center">
-    <img src="dash/board_files/tra-logo-2.png" alt="" style="width: 50px; height: auto; margin-left: 20%;" >
-    <img src="dash/board_files/TIRAlogo.png" alt="" style="width: 50px; height: auto; margin-left: 5%;">
-    <img src="dash/board_files/mualogo.png" alt="" style="width: 200px; height: auto; margin-left: 5%;">
-    <img src="dash/board_files/monexlogo.jpg" alt="" style="width: 100px; height: auto; margin-left: 5%;">
-    </div>
+<div class="container d-flex flex-wrap justify-content-center align-items-center gap-4 py-3">
+  <img src="dash/board_files/tra-logo-2.png" alt="TRA Logo" style="width: 50px; height: auto;">
+  <img src="dash/board_files/TIRAlogo.png" alt="TIRA Logo" style="width: 50px; height: auto;">
+  <img src="dash/board_files/mualogo.png" alt="MUA Logo" style="width: 150px; height: auto;">
+  <img src="dash/board_files/monexlogo.jpg" alt="Monex Logo" style="width: 100px; height: auto;">
+</div>
 
     <!-- Featured Programs Section -->
     <section id="featured-programs" class="featured-programs section">
@@ -1347,7 +1364,7 @@
         <!-- You can delete the links only if you've purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        Designed by <a href="https://bootstrapmade.com/">Humtech</a>
+        Designed by <a href="#">Humtech</a>
       </div>
     </div>
 
