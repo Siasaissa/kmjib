@@ -129,7 +129,7 @@
                                     </a>
                                     <div class="card-toolbar ms-4 d-flex align-items-center gap-1">
                                         <a href="#" style="color: white;">
-                                            <button class="btn btn-sm bg-danger text-white">
+                                            <button class="btn btn-sm bg-danger text-white" onclick="startDownload()">
                                                 <i class="bi bi-download text-white"></i> Download All
                                             </button>
                                         </a>
@@ -149,46 +149,73 @@
                     <div class="card-body pt-6">
                         <!--begin::Table container-->
                         <div class="table-responsive">
-                        <!--begin::Table-->
-                        <table class="table table align-items-center border-danger" style=".border-light-danger {border-color: #f8d7da !important; } font-family: Geneva !important; ">
-                            <!--begin::Table head-->
-                            <thead>
-                                <tr class="fs-5 fw-bold text-dark border-bottom-2 ">
-                                    <th class=" min-w-100px text-center ">S/No</th>
-                                    <th class=" min-w-100px text-center ">Name</th>
-                                    <th class=" min-w-100px text-center ">Insurance</th>
-                                    <th class=" min-w-100px text-center ">Expiry</th>
-                                    <th class=" min-w-100px text-center ">Status</th>
-                                    <th class=" min-w-100px text-center ">Download</th>
+                            <!--begin::Table-->
+                            <table class="table table align-items-center border-danger"
+                                style=".border-light-danger {border-color: #f8d7da !important; } font-family: Geneva !important; ">
+                                <!--begin::Table head-->
+                                <thead>
+                                    <tr class="fs-5 fw-bold text-dark border-bottom-2 ">
+                                        <th class=" min-w-100px text-center ">S/No</th>
+                                        <th class=" min-w-100px text-center ">Name</th>
+                                        <th class=" min-w-100px text-center ">Insurance</th>
+                                        <th class=" min-w-100px text-center ">Expiry</th>
+                                        <th class=" min-w-100px text-center ">Status</th>
+                                        <th class=" min-w-100px text-center ">Download</th>
 
-                                </tr>
-                            </thead>
-                            <!--end::Table head-->
+                                    </tr>
+                                </thead>
+                                <!--end::Table head-->
 
-                            <!--begin::Table body-->
-                            <tbody>
-                                <tr class="border-bottom-2">
-                                <td class="text-gray-600 fs-6 text-center">01</td>
-                                <td class="text-gray-600 fs-6 text-center">Ahmed Siasa</td>
-                                <td class="text-gray-600 fs-6 text-center">Health Insurance</td>
-                                <td class="text-gray-600 fs-6 text-center">2025-07-14</td>
-                                <td class="fs-6 text-center">
-                                    <span class="badge border border-warning text-primary d-inline-block text-center" style="width: 80px; color: orange !important;">
-                                    Pending
-                                    </span>
-                                </td>
-                                <td class="text-center d-flex justify-content-center gap-3">
-                                    <span><i class="bi bi-download fs-4 cursor-pointer me-4" style="color: #007bff !important;"></i></span>
-                                </td>
-                                </tr>
-                            </tbody>
-                            <!--end::Table body-->
-                        </table>
-                    </div>
+                                <!--begin::Table body-->
+                                <tbody>
+                                    <tr class="border-bottom-2">
+                                        <td class="text-gray-600 fs-6 text-center">01</td>
+                                        <td class="text-gray-600 fs-6 text-center">Ahmed Siasa</td>
+                                        <td class="text-gray-600 fs-6 text-center">Health Insurance</td>
+                                        <td class="text-gray-600 fs-6 text-center">2025-07-14</td>
+                                        <td class="fs-6 text-center">
+                                            <span
+                                                class="badge border border-warning text-primary d-inline-block text-center"
+                                                style="width: 80px; color: orange !important;">
+                                                Pending
+                                            </span>
+                                        </td>
+                                        <td class="text-center d-flex justify-content-center gap-3">
+                                            <i class="bi bi-download fs-4 cursor-pointer me-4 text-warning"onclick="startDownload()"></i>
+                                                    
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <!--end::Table body-->
+                            </table>
+                        </div>
                     </div>
                 </div>
 
             </div>
+            <!-- Download Progress Modal -->
+            <div class="modal fade" id="downloadProgressModal" tabindex="-1" aria-labelledby="downloadProgressLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md-custom">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="downloadProgressLabel">Downloading Files</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Please wait while we prepare your download...</p>
+                            <div class="progress">
+                                <div id="downloadProgressBar"
+                                    class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                    style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                    0%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!--modal start-->
 
             <!--modal end-->
@@ -246,6 +273,34 @@
                     });
                 });
             </script>
+            <script>
+                function startDownload() {
+                    const modal = new bootstrap.Modal(document.getElementById('downloadProgressModal'));
+                    modal.show();
+
+                    const progressBar = document.getElementById('downloadProgressBar');
+                    let progress = 0;
+                    progressBar.style.width = '0%';
+                    progressBar.setAttribute('aria-valuenow', 0);
+                    progressBar.textContent = '0%';
+
+                    // Simulate progress
+                    const interval = setInterval(() => {
+                        progress += 10;
+                        if (progress > 100) {
+                            clearInterval(interval);
+                            progressBar.classList.remove('progress-bar-animated');
+                            progressBar.classList.add('bg-success');
+                            progressBar.textContent = 'Download Complete';
+                        } else {
+                            progressBar.style.width = `${progress}%`;
+                            progressBar.setAttribute('aria-valuenow', progress);
+                            progressBar.textContent = `${progress}%`;
+                        }
+                    }, 500);
+                }
+            </script>
+
 
         </div>
 </body>
