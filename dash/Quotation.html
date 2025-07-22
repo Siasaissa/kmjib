@@ -604,9 +604,7 @@
                         </a>
                         </div>
                         <div class="col-md-3">
-                            <a href="textDownload.html" target="_blank" class="text-decoration-none">
-                        <div class="card bg-danger p-3 text-center text-white cursor-pointer">Print Risknote</div>
-                            </a>
+                        <div class="card bg-danger p-3 text-center text-white cursor-pointer" id="downloadBtn">Print Risknote</div>
                         </div>
                         <div class="col-md-3">
                             <a href="#" class="text-decoration-none">
@@ -654,5 +652,13 @@
                 </div>
             </div>
 </body>
+<script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Store the download flag
+            sessionStorage.setItem('downloadCoverNote', 'true');
+            // Redirect to the page that will generate the PDF
+            window.location.href = 'textDownload.html';
+        });
+    </script>
 
 </html>
